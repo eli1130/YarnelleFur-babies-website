@@ -1,0 +1,14 @@
+# Yarnelle Fur Babies - Netlify Redirects
+# Redirect all old/broken URLs to the homepage
+
+/miniature-f1bb-goldendoodles       /     301
+/mini-f1bb-goldendoodles            /     301
+/mini-f1bb-saintberdoodles          /     301
+/mini-f1b-saintberdoodles           /     301
+/mini-multigen-bernedoodles         /     301
+/mini-f1b-bernedoodles              /     301
+/medium-f1b-bernedoodles            /     301
+/toy-f1-aussiedoodles               /     301
+/colliedoodles                      /     301
+/about-us                           /     301
+/our-facility                       /     301
