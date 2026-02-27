@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yarnelle Fur-Babies | Family-Raised Doodles — Columbia City, IN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --white: #ffffff;
+      --offwhite: #f7f7f7;
+      --light-gray: #e5e5e5;
+      --mid-gray: #aaaaaa;
+      --dark-gray: #333333;
+      --black: #111111;
+      --text: #1a1a1a;
+      --text-light: #555555;
+      --red: #cc0000;
+      --red-dark: #aa0000;
+      --red-light: #ff4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); font-weight: 300; line-height: 1.7; }
+
+    /* ── PAGES ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(8px);
+      border-bottom: 3px solid var(--red); padding: 0 2rem;
+    }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--black); text-decoration: none; letter-spacing: 0.02em; cursor: pointer; }
+    .nav-logo span { color: var(--red); font-style: italic; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--text-light); transition: color 0.2s; cursor: pointer; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 0.5rem 1.2rem !important; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--black); margin: 5px 0; }
+    .mobile-nav { display: none; flex-direction: column; background: #fff; border-top: 1px solid var(--light-gray); padding: 1rem 2rem 1.5rem; }
+    .mobile-nav a { font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--text); padding: 0.7rem 0; border-bottom: 1px solid var(--light-gray); cursor: pointer; }
+    .mobile-nav a:last-child { border: none; }
+    .mobile-nav.open { display: flex; }
+
+    /* ── BANNER ── */
+    .banner { background: var(--black); color: #fff; text-align: center; padding: 0.6rem 1rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .banner span { color: var(--red-light); }
+
+    /* ── BUTTONS ── */
+    .btn-primary { background: var(--red); color: #fff; padding: 0.85rem 2rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; transition: background 0.2s; display: inline-block; cursor: pointer; border: none; font-family: 'Jost', sans-serif; }
+    .btn-primary:hover { background: var(--red-dark); }
+    .btn-secondary { border: 1px solid var(--mid-gray); color: var(--text); padding: 0.85rem 2rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; transition: all 0.2s; display: inline-block; cursor: pointer; background: none; font-family: 'Jost', sans-serif; }
+    .btn-secondary:hover { border-color: var(--red); color: var(--red); }
+    .btn-black { background: var(--black); color: #fff; padding: 0.85rem 2rem; text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; transition: background 0.2s; display: inline-block; cursor: pointer; border: none; font-family: 'Jost', sans-serif; }
+    .btn-black:hover { background: var(--dark-gray); }
+
+    /* ── SECTION COMMONS ── */
+    .section { padding: 6rem 2rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 4rem; }
+    .eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 0.8rem; }
+    .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--black); line-height: 1.2; }
+    .section-header h2 em { font-style: italic; color: var(--red); }
+    .section-header p { color: var(--text-light); max-width: 520px; margin: 1rem auto 0; font-size: 0.95rem; }
+
+    /* ── IMAGE PLACEHOLDERS ── */
+    .img-placeholder {
+      background: var(--offwhite); border: 1px solid var(--light-gray);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--mid-gray); font-size: 0.75rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-align: center;
+    }
+    .img-placeholder.dark {
+      background: var(--black); border-color: var(--dark-gray); color: #444;
+    }
+
+    /* ══════════════════════════════
+       HOME PAGE
+    ══════════════════════════════ */
+
+    /* Hero */
+    .hero { min-height: 100vh; background: var(--white); display: flex; flex-direction: column; justify-content: center; padding-top: 94px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; top: 0; right: 0; width: 45%; height: 100%; background: var(--offwhite); clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; position: relative; z-index: 1; }
+    .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 1.2rem; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 5.2rem); font-weight: 300; line-height: 1.05; color: var(--black); margin-bottom: 1.5rem; }
+    .hero h1 em { font-style: italic; color: var(--red); }
+    .hero-sub { font-size: 1rem; color: var(--text-light); max-width: 440px; margin-bottom: 2.5rem; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-stats { background: var(--white); border: 1px solid var(--light-gray); border-top: 3px solid var(--red); padding: 2.5rem; display: flex; flex-direction: column; gap: 1.8rem; box-shadow: 0 8px 40px rgba(0,0,0,0.07); }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--red); line-height: 1; }
+    .stat-label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-top: 0.3rem; }
+    .stat-divider { height: 1px; background: var(--light-gray); }
+
+    /* Breeds grid */
+    .breeds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .breed-card { background: var(--white); border: 1px solid var(--light-gray); border-radius: 2px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; cursor: pointer; }
+    .breed-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); border-color: var(--red); }
+    .breed-card-img { width: 100%; height: 200px; }
+    .breed-card-header { background: var(--offwhite); padding: 1.4rem 1.5rem 1.2rem; border-bottom: 1px solid var(--light-gray); }
+    .breed-tag { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
+    .breed-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--black); }
+    .breed-card-body { padding: 1.2rem 1.5rem 1.5rem; }
+    .breed-detail { font-size: 0.84rem; color: var(--text-light); line-height: 1.6; }
+    .breed-price { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--black); margin-top: 0.8rem; font-weight: 400; }
+    .breed-avail { display: inline-block; margin-top: 0.6rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.85rem; background: #fff0f0; color: var(--red); border-radius: 20px; }
+    .breed-view { display: inline-block; margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red); padding-bottom: 1px; }
+
+    /* Process */
+    .process-bg { background: var(--black); color: #fff; padding: 6rem 2rem; }
+    .process-inner { max-width: 1100px; margin: 0 auto; }
+    .process-bg .eyebrow { color: var(--red-light); }
+    .process-bg h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: #fff; margin-bottom: 3.5rem; text-align: center; }
+    .process-bg h2 em { font-style: italic; color: var(--red-light); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; }
+    .step { border-left: 2px solid var(--red); padding-left: 1.5rem; }
+    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--red); line-height: 1; }
+    .step h4 { font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; margin: 0.5rem 0 0.6rem; }
+    .step p { font-size: 0.87rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; color: var(--black); line-height: 1.2; margin-bottom: 1.5rem; }
+    .about-text h2 em { font-style: italic; color: var(--red); }
+    .about-text p { color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem; }
+    .about-quote { font-style: italic; color: var(--text) !important; border-left: 3px solid var(--red); padding-left: 1rem; margin: 1.5rem 0 !important; }
+    .family-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .family-card { background: var(--offwhite); border: 1px solid var(--light-gray); border-top: 2px solid var(--red); padding: 1.2rem; }
+    .family-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--black); margin-bottom: 0.3rem; }
+    .family-card p { font-size: 0.8rem; color: var(--text-light); line-height: 1.55; }
+    .family-card .phone { margin-top: 0.5rem; font-size: 0.82rem; color: var(--red); font-weight: 500; }
+
+    /* FAQ */
+    .faq-bg { background: var(--offwhite); }
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--light-gray); background: var(--white); margin-bottom: 2px; }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 1.3rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-q span { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--black); text-align: left; }
+    .faq-icon { width: 22px; height: 22px; flex-shrink: 0; border: 1px solid var(--mid-gray); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.25s, background 0.25s; font-size: 1rem; color: var(--red); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--red); color: #fff; border-color: var(--red); }
+    .faq-a { display: none; padding: 0 1.5rem 1.4rem; font-size: 0.9rem; color: var(--text-light); line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+    .contact-info h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 300; color: var(--black); margin-bottom: 1rem; }
+    .contact-info h2 em { font-style: italic; color: var(--red); }
+    .contact-info > p { color: var(--text-light); margin-bottom: 1.8rem; font-size: 0.95rem; }
+    .contact-cards { display: flex; flex-direction: column; gap: 0.8rem; }
+    .contact-card { background: var(--offwhite); border: 1px solid var(--light-gray); border-left: 3px solid var(--red); padding: 1rem 1.2rem; }
+    .contact-card .role { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); }
+    .contact-card .cname { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--black); margin: 0.15rem 0 0.1rem; }
+    .contact-card .cinfo { font-size: 0.84rem; color: var(--text-light); }
+    .contact-card .cinfo a { color: var(--red-dark); text-decoration: none; }
+    .app-form { display: flex; flex-direction: column; gap: 1rem; }
+    .app-form h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--black); }
+    .app-form > p { font-size: 0.85rem; color: var(--text-light); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-group label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); }
+    .form-group input, .form-group select, .form-group textarea { padding: 0.7rem 0.9rem; border: 1px solid var(--light-gray); border-radius: 2px; background: var(--white); font-family: 'Jost', sans-serif; font-size: 0.9rem; color: var(--text); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--red); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-note { font-size: 0.78rem; color: var(--text-light); }
+    .form-note a { color: var(--red-dark); text-decoration: none; }
+
+    /* Reviews */
+    .reviews-section { background: var(--offwhite); border-top: 1px solid var(--light-gray); border-bottom: 1px solid var(--light-gray); }
+    .reviews-header { text-align: center; margin-bottom: 3rem; }
+    .reviews-header .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem; }
+    .reviews-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: var(--black); line-height: 1.15; }
+    .reviews-header h2 em { font-style: italic; color: var(--red); }
+    .reviews-header p { color: var(--text-light); font-size: 0.92rem; margin-top: 0.7rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review-card { background: var(--white); border: 1px solid var(--light-gray); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; transition: box-shadow 0.2s; }
+    .review-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .review-card-top { display: flex; align-items: flex-start; gap: 0.8rem; }
+    .review-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--red); color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 600; }
+    .review-meta { flex: 1; }
+    .review-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--black); line-height: 1.2; }
+    .review-recommends { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin-top: 0.1rem; }
+    .review-stars { display: flex; gap: 2px; margin-top: 0.3rem; }
+    .review-stars span { color: #f5a623; font-size: 0.85rem; }
+    .review-text { font-size: 0.88rem; color: var(--text-light); line-height: 1.75; flex: 1; }
+    .review-breed-tag { display: inline-block; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); border: 1px solid var(--red); padding: 0.2rem 0.6rem; align-self: flex-start; }
+    .reviews-cta { text-align: center; margin-top: 3rem; }
+    .reviews-cta p { font-size: 0.88rem; color: var(--text-light); margin-bottom: 1rem; }
+
+    /* Footer */
+    footer { background: var(--black); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; border-top: 3px solid var(--red); }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-logo em { font-style: italic; color: var(--red-light); }
+    .footer-tagline { font-size: 0.85rem; margin-bottom: 1.8rem; }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .footer-links a { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--red-light); }
+    .footer-social { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--red-light); text-decoration: none; font-size: 0.83rem; margin-bottom: 1.5rem; }
+    .footer-social:hover { color: #fff; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+    /* ══════════════════════════════
+       BREED DETAIL PAGE
+    ══════════════════════════════ */
+    .breed-page { padding-top: 94px; min-height: 100vh; }
+    .breed-hero { background: var(--black); color: #fff; padding: 3rem 2rem 3.5rem; position: relative; overflow: hidden; }
+    .breed-hero::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 3px; background: var(--red); }
+    .breed-hero-inner { max-width: 1200px; margin: 0 auto; }
+    .back-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); cursor: pointer; background: none; border: none; font-family: 'Jost', sans-serif; margin-bottom: 1.5rem; transition: color 0.2s; padding: 0; }
+    .back-btn:hover { color: var(--red-light); }
+    .breed-hero-meta { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red-light); margin-bottom: 0.8rem; }
+    .breed-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 300; color: #fff; line-height: 1.1; margin-bottom: 0.5rem; }
+    .breed-hero-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--red-light); }
+
+    .breed-content { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .breed-layout { display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; }
+
+    /* Puppy photo grid */
+    .puppy-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 2.5rem; }
+    .puppy-photo { width: 100%; aspect-ratio: 1; }
+    .puppy-photo-wide { grid-column: span 2; aspect-ratio: 2/1; width: 100%; }
+
+    /* Puppy info cards */
+    .info-section { margin-bottom: 2.5rem; }
+    .info-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; color: var(--black); margin-bottom: 1.2rem; border-bottom: 1px solid var(--light-gray); padding-bottom: 0.6rem; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .info-item { background: var(--offwhite); border: 1px solid var(--light-gray); padding: 1rem 1.2rem; }
+    .info-item .label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 0.3rem; }
+    .info-item .value { font-size: 0.95rem; color: var(--black); font-weight: 400; }
+
+    /* Puppy list */
+    .puppy-list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+    .puppy-item { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1rem; border: 1px solid var(--light-gray); background: var(--white); }
+    .puppy-item .pname { font-size: 0.95rem; color: var(--black); }
+    .puppy-item .pgender { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; }
+    .puppy-item .pprice { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--red); }
+
+    /* Parents section */
+    .parents-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    .parent-card { background: var(--offwhite); border: 1px solid var(--light-gray); overflow: hidden; }
+    .parent-photo { width: 100%; height: 200px; }
+    .parent-info { padding: 1rem; }
+    .parent-role { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 0.3rem; }
+    .parent-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--black); }
+    .parent-detail { font-size: 0.82rem; color: var(--text-light); margin-top: 0.2rem; }
+
+    /* Previous litter gallery */
+    .prev-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; }
+    .prev-gallery-photo { width: 100%; aspect-ratio: 1; }
+    .prev-gallery-photo.wide { grid-column: span 2; aspect-ratio: 2/1; }
+
+    /* Sidebar */
+    .breed-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 1.2rem; }
+    .sidebar-card { background: var(--offwhite); border: 1px solid var(--light-gray); border-top: 3px solid var(--red); padding: 1.5rem; }
+    .sidebar-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--black); margin-bottom: 1rem; }
+    .sidebar-detail { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 0.5rem 0; border-bottom: 1px solid var(--light-gray); }
+    .sidebar-detail:last-of-type { border: none; }
+    .sidebar-detail .sd-label { color: var(--text-light); }
+    .sidebar-detail .sd-value { color: var(--black); font-weight: 400; }
+    .sidebar-cta { display: flex; flex-direction: column; gap: 0.8rem; }
+
+    /* Fade in */
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .breed-layout { grid-template-columns: 1fr; }
+      .breed-sidebar { position: static; }
+    }
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero::after { display: none; }
+      .hero-stats { flex-direction: row; justify-content: space-around; padding: 1.5rem; gap: 0.5rem; }
+      .stat-divider { display: none; }
+      .stat-num { font-size: 2.2rem; }
+      .family-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .puppy-photos { grid-template-columns: repeat(2, 1fr); }
+      .parents-grid { grid-template-columns: 1fr; }
+      .prev-gallery { grid-template-columns: repeat(2, 1fr); }
+      .info-grid { grid-template-columns: 1fr; }
+    }
+  /* Puppy Carousel */
+  .puppy-carousel { position: relative; width: 100%; max-width: 400px; margin: 0 auto; }
+  .carousel-track { overflow: hidden; border-radius: 8px; }
+  .carousel-slide { display: none; }
+  .carousel-slide.active { display: block; }
+  .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.45); color: #fff; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 1.1rem; cursor: pointer; z-index: 2; transition: background 0.2s; }
+  .carousel-btn:hover { background: rgba(0,0,0,0.7); }
+  .carousel-prev { left: 8px; }
+  .carousel-next { right: 8px; }
+  .carousel-dots { text-align: center; padding: 8px 0 2px; }
+  .carousel-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #ccc; margin: 0 4px; cursor: pointer; transition: background 0.2s; }
+  .carousel-dot.active { background: var(--red, #b44); }
+  </style>
+</head>
+<body>
+
+<!-- BANNER -->
+<div class="banner">✈ Out of State? We Offer <span>Ground Transport</span> & <span>Air Transport via Puppy Nanny</span> — Call Brooke: (260) 443-9035</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="showPage('home')">Yarnelle <span>Fur-Babies</span></a>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home'); scrollToSection('breeds')">Available Puppies</a></li>
+      <li><a onclick="showPage('home'); scrollToSection('process')">Adoption Process</a></li>
+      <li><a onclick="showPage('home'); scrollToSection('about')">Our Family</a></li>
+            <li><a onclick="showPage('home'); scrollToSection('facility')">Our Facility</a></li>
+      <li><a onclick="showPage('home'); scrollToSection('reviews')">Reviews</a></li>
+      <li><a onclick="showPage('home'); scrollToSection('faq')">FAQ</a></li>
+      <li><a onclick="showPage('got-jesus')">Got Jesus?</a></li>
+      <li><a onclick="showPage('home'); scrollToSection('contact')" class="nav-cta">Apply Now</a></li>
+    </ul>
+    <button class="menu-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a onclick="showPage('home'); scrollToSection('breeds'); closeMobile()">Available Puppies</a>
+    <a onclick="showPage('home'); scrollToSection('process'); closeMobile()">Adoption Process</a>
+    <a onclick="showPage('home'); scrollToSection('about'); closeMobile()">Our Family</a>
+      <a onclick="showPage('home'); scrollToSection('facility'); closeMobile()">Our Facility</a>
+    <a onclick="showPage('home'); scrollToSection('reviews'); closeMobile()">Reviews</a>
+    <a onclick="showPage('home'); scrollToSection('faq'); closeMobile()">FAQ</a>
+    <a onclick="showPage('got-jesus'); closeMobile()">Got Jesus?</a>
+    <a onclick="showPage('home'); scrollToSection('contact'); closeMobile()">Apply Now</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════
+     HOME PAGE
+══════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">Columbia City, Indiana · Est. 2019</p>
+        <h1>Family-Raised<br><em>Doodles</em><br>With Love</h1>
+        <p class="hero-sub">Thoughtfully bred puppies from a close-knit family of 16 on a 10-acre farm. Every pup is loved daily, health-tested, and raised with children and animals from birth.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="scrollToSection('breeds')">Browse Available Puppies</button>
+          <button class="btn-secondary" onclick="scrollToSection('process')">How It Works</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">35+</div><div class="stat-label">Years Breeding Experience</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><div class="stat-num">10</div><div class="stat-label">Acres of Fenced Farm</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><div class="stat-num">9+</div><div class="stat-label">Breeds Available</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><div class="stat-num">♥</div><div class="stat-label">Health Guaranteed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available Breeds -->
+  <section class="section" id="breeds">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Our Puppies</p>
+        <h2>Available <em>Breeds & Litters</em></h2>
+        <p>Click any breed to view full litter details, meet the parents, and see available puppies.</p>
+      </div>
+      <div class="breeds-grid">
+
+        <div class="breed-card" onclick="showBreed('saint-lucy')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0001.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;" alt="Saint Berdoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">John & Kathy Yarnelle</div>
+            <h3>Saint Berdoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">Standard F1B Saint Berdoodles — gentle giants with sweet temperaments. Lucy × Bonsai litter.</p>
+            <div class="breed-price">$1,200 – $2,000</div>
+            <span class="breed-avail">5 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('aussiedoodle')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0002.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;" alt="Toy Aussiedoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">John & Kathy Yarnelle</div>
+            <h3>Toy Aussiedoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">F1 Toy Aussiedoodles — intelligent, playful, compact. Jojo × Ash litter.</p>
+            <div class="breed-price">$1,200 – $1,800</div>
+            <span class="breed-avail">2 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('mini-berne')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0003.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;" alt="Mini Bernedoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">John & Kathy Yarnelle</div>
+            <h3>Mini F1B Bernedoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">Mini F1B Bernedoodles — low-shedding, affectionate tricolor beauties. Flower × Sycamore litter.</p>
+            <div class="breed-price">$1,200</div>
+            <span class="breed-avail">1 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('goldendoodle')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0004.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;" alt="Mini Goldendoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">John & Kathy Yarnelle</div>
+            <h3>Merle Mini F1BB Goldendoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">F1BB Merle Mini Goldendoodles — most hypoallergenic generation with stunning merle patterns. Princess Diana × Billy litter.</p>
+            <div class="breed-price">$800</div>
+            <span class="breed-avail">1 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('multigen-berne')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0005.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;" alt="Mini Multigen Bernedoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">Luke & Eli Yarnelle</div>
+            <h3>Mini Multigen Bernedoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">Multigen Mini Bernedoodles — predictable coats, exceptional temperaments. Meadow May × Sycamore litter.</p>
+            <div class="breed-price">$800</div>
+            <span class="breed-avail">1 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('saint-blake')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0006.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;" alt="Saint Berdoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">Luke & Eli Yarnelle</div>
+            <h3>Saint Berdoodles — Blake</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">Standard F1B Saint Berdoodles — big-hearted, fluffy, endlessly cuddly. Blake × Bamboo litter.</p>
+            <div class="breed-price">$1,000 – $2,000</div>
+            <span class="breed-avail">5 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('colliedoodle')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0007.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;" alt="Colliedoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">Luke & Eli Yarnelle</div>
+            <h3>F1 Colliedoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">F1 Colliedoodles — rare and beautiful, combining the grace of a Collie with Poodle intelligence. Liberty × Thomas litter.</p>
+            <div class="breed-price">$650</div>
+            <span class="breed-avail">2 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('cavapoo')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0008.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;" alt="Cavapoo Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">Dakoda & Brooke Labenz</div>
+            <h3>Cavapoos</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">F1B Red Cavapoos — small in size, enormous in personality. Honey × Teddy litter.</p>
+            <div class="breed-price">$2,000</div>
+            <span class="breed-avail">2 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('saint-gracie')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0009.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;" alt="Saint Berdoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">Dakoda & Brooke Labenz</div>
+            <h3>Saint Berdoodles — Gracie</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">Standard F1B Saint Berdoodles — gentle giants, cuddly, calm, and great with families. Gracie × Pumpkin litter.</p>
+            <div class="breed-price">$1,850 – $2,000</div>
+            <span class="breed-avail">7 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('micro-golden')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0010.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;" alt="Micro Mini Goldendoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">Hunter & Sarah Nicodemus</div>
+            <h3>Micro Mini Goldendoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">Micro Mini F1B Goldendoodles — tiny bundles of golden joy, low-shedding. Helga × Cedar litter.</p>
+            <div class="breed-price">$1,500</div>
+            <span class="breed-avail">2 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+        <div class="breed-card" onclick="showBreed('medium-berne')">
+          <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0011.png" class="breed-card-img" style="width:100%;height:200px;object-fit:cover;object-position:center 20%;" alt="Medium Bernedoodle Puppy" />
+          <div class="breed-card-header">
+            <div class="breed-tag">Hunter & Sarah Nicodemus</div>
+            <h3>Medium F1B Bernedoodles</h3>
+          </div>
+          <div class="breed-card-body">
+            <p class="breed-detail">Medium F1B Bernedoodles — ideal mid-size family dog, plush coat, gentle nature. Sky × Thor litter.</p>
+            <div class="breed-price">$1,500</div>
+            <span class="breed-avail">1 Available</span><br>
+            <span class="breed-view">View Litter →</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process-bg" id="process">
+    <div class="process-inner">
+      <div style="text-align:center" class="eyebrow">Step by Step</div>
+      <h2>The <em>Adoption</em> Process</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">01</div><h4>Browse & Reach Out</h4><p>Browse available breeds above or contact Brooke at (260) 443-9035 about upcoming litters and waitlists.</p></div>
+        <div class="step"><div class="step-num">02</div><h4>Place a Deposit</h4><p>A $200–$400 nonrefundable but transferable deposit holds your spot. Zelle, CashApp, or Cash. Tell us your preferred gender.</p></div>
+        <div class="step"><div class="step-num">03</div><h4>Pick Your Puppy</h4><p>Virtual picks begin at 3–4 weeks for solid litters. Multicolor picks begin at 1–2 weeks via FaceTime. In-person visits at 6 weeks.</p></div>
+        <div class="step"><div class="step-num">04</div><h4>Submit Application</h4><p>Complete the puppy application before your visit. This helps us ensure the perfect match for our fur-babies.</p></div>
+        <div class="step"><div class="step-num">05</div><h4>Welcome Home!</h4><p>At 8 weeks your puppy comes home with a goody bag of toys, food, a scent blanket, vaccine records, and health guarantee. Balance due in cash.</p></div>
+        <div class="step"><div class="step-num">✈</div><h4>Can't Pick Up? We'll Deliver!</h4><p>We offer <strong>ground transport</strong> for local delivery, and <strong>air transport via puppy nanny</strong> for out-of-state families — personally flown by Luke Yarnelle. Contact Brooke for pricing and availability.</p></div>
+      </div>
+      <div style="text-align:center; margin-top: 3.5rem;">
+        <a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary">Place a Deposit via CashApp →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <div style="width:100%;background:#000;text-align:center;line-height:0;">
+    <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0012.jpg" style="width:100%;max-width:1200px;height:auto;display:inline-block;" alt="The Yarnelle Family" />
+  </div>
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="eyebrow">Our Story</p>
+          <h2>A <em>Family Farm</em> Built on Love</h2>
+          <div style="width:100%;margin-bottom:1.5rem;line-height:0;border-radius:8px;overflow:hidden;">
+            <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0013.png" style="width:100%;height:auto;" alt="Yarnelle Farms Equine" />
+          </div>
+          <p>Yarnelle Fur-Babies is a small, family-run breeding program on a beautiful 10-acre farm in Columbia City, Indiana — with 6 acres of in-ground fencing so our dogs can run and play every single day.</p>
+          <p>John and Kathy Yarnelle have been raising equine livestock for over 35 years through Yarnelle Farms Equine, LLC. As their family grew — through biological children, adoptions from Guatemala, and an ongoing journey adopting from Haiti — so did their love of raising exceptional dogs and doodles.</p>
+          <p>All puppies are handled with love daily and socialized with children of all ages (newborn through 16!), other dogs, and cats. Every pup deserves individual attention, care, and affection — and that's exactly what they get.</p>
+          <div style="text-align:center;margin:1.5rem 0;">
+            <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0014.png" style="width:180px;height:180px;object-fit:cover;border-radius:50%;border:3px solid var(--red);box-shadow:0 4px 16px rgba(0,0,0,0.12);" alt="Seth Yarnelle" />
+            <p style="font-size:0.8rem;color:var(--text-light);margin-top:0.5rem;letter-spacing:0.08em;text-transform:uppercase;">Seth Yarnelle</p>
+          </div>
+          <p class="about-quote">We miss our beloved Seth, who left us far too soon at 2.5 years old. His joy and his love for animals lives on in everything we do.</p>
+          <button class="btn-secondary" onclick="scrollToSection('contact')" style="margin-top: 1.5rem;">Get in Touch With Us</button>
+        </div>
+        <div>
+          <div class="family-grid">
+            <div class="family-card">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0015.png" style="width:100%;height:160px;object-fit:cover;border-radius:4px;margin-bottom:0.8rem;" alt="John & Kathy Yarnelle" />
+              <h4>John & Kathy Yarnelle</h4>
+              <p>Founders — Saint Berdoodles, Bernedoodles, Aussiedoodles & Goldendoodles</p>
+              <p class="phone">(260) 410-7925</p>
+            </div>
+            <div class="family-card">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0016.jpg" style="width:100%;height:200px;object-fit:contain;background:#f7f7f7;border-radius:4px;margin-bottom:0.8rem;" alt="Dakoda & Brooke Labenz" />
+              <h4>Dakoda & Brooke Labenz</h4>
+              <p>Cavapoo's, Aussiedoodle, Goldendoodles, & Saint Berdoodles — Brooke manages all sales, updates, and communications.</p>
+              <p class="phone">(260) 443-9035</p>
+            </div>
+            <div class="family-card">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0017.png" style="width:100%;height:160px;object-fit:cover;object-position:center top;object-position:center top;border-radius:4px;margin-bottom:0.8rem;" alt="Travis & Hannah Mullendore" />
+              <h4>Travis & Hannah Mullendore</h4>
+              <p>Animal lovers & parents to Shiloh, Micah, and Olive — currently adopting from Haiti.</p>
+              <p class="phone">(260) 410-4149</p>
+            </div>
+            <div class="family-card">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0018.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;border-radius:4px;margin-bottom:0.8rem;" alt="Hunter & Sarah Nicodemus" />
+              <h4>Hunter & Sarah Nicodemus</h4>
+              <p>Micro Mini Goldendoodles & Medium Bernedoodles — parents to Jonah, Esther, and Seth Jr.</p>
+              <p class="phone">(260) 494-0405</p>
+            </div>
+            <div class="family-card" style="grid-column:1/-1">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0019.png" style="width:100%;width:100%;height:auto;max-height:240px;object-fit:contain;background:#f7f7f7;border-radius:4px;margin-bottom:0.8rem;" alt="Luke & Eli Yarnelle" />
+              <h4>Luke & Eli Yarnelle</h4>
+              <p>Adopted from Guatemala, Luke and Eli are an incredible help with all the dogs and puppies.</p>
+              <p class="phone">(260) 213-1685</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:2rem 2rem 2rem;">
+      <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0020.png" style="width:100%;max-width:600px;height:auto;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.1);" alt="The Yarnelle Family" />
+    </div>
+  </section>
+
+
+  <!-- Our Facility -->
+  <section class="section" id="facility" style="background:var(--offwhite);">
+    <div class="section-inner">
+      <p class="eyebrow" style="text-align:center;">Where Our Puppies Are Raised</p>
+      <h2 style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;margin-bottom:0.5rem;">Our <em style="font-style:italic;color:var(--red);">Facility</em></h2>
+      <p style="text-align:center;max-width:600px;margin:0 auto 2.5rem;color:var(--text-light);">9 acres with a beautiful pond, a heated & air-conditioned puppy nursery, outdoor pens, and a deck where puppies play from 6 weeks on — all built with love by John Yarnelle himself.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem;">
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0021.png" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;" alt="The Yarnelle barn and family" />
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0022.png" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;" alt="9 acres and pond" />
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0023.png" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;" alt="Outdoor pen for puppies" />
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem;">
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0024.png" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;" alt="Puppy photo spot on deck" />
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0025.png" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;" alt="Deck off the puppy nursery" />
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem;">
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0026.png" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;" alt="Puppy indoor play space" />
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0027.jpg" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;" alt="Nursery whelping area" />
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem;">
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0028.jpg" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;" alt="Nursery interior" />
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0029.jpg" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;" alt="Nursery care station" />
+      </div>
+      <div style="display:grid;grid-template-columns:1fr;gap:1rem;">
+        <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0030.jpg" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;" alt="Nursery kitchen area" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-bg" id="faq">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="eyebrow">Questions & Answers</p>
+        <h2>Frequently Asked <em>Questions</em></h2>
+        <p>Everything you need to know before bringing your new fur-baby home.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>Are your puppies well socialized?</span><div class="faq-icon">+</div></button><div class="faq-a">Our puppies are family-raised around children from newborn to 16, as well as other dogs and cats, every single day. Only our family handles them for the first 6 weeks to protect against illness. In-person visits begin at 6 weeks after first vaccinations — by appointment only.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>What food are the puppies on?</span><div class="faq-icon">+</div></button><div class="faq-a">We use Purina Puppy Chow Tender & Crunchy. We'll send a bag home with your puppy. If switching foods, transition gradually over 7–10 days to avoid stomach upset.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>Why might my puppy have diarrhea when they come home?</span><div class="faq-icon">+</div></button><div class="faq-a">Transition stress is completely normal. Puppies are leaving their mom, siblings, and everything familiar. Plain white rice or pure pumpkin mixed into food helps firm up their stool. Remember — all dogs need deworming monthly throughout their lives.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>Why can't puppies come home before 8 weeks?</span><div class="faq-icon">+</div></button><div class="faq-a">The first 8 weeks are critical for behavioral development — puppies learn vital social skills from their mom and littermates. It is also Indiana state law. We're flexible about scheduling once the 8-week milestone is reached.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>Are the puppies crate or potty trained?</span><div class="faq-icon">+</div></button><div class="faq-a">Puppies' bladders aren't fully developed until 4–6 months, so expect bathroom trips every 1–3 hours. We introduce a separate potty area at 3 weeks. We recommend crate training from day one with a divider. Many families love the "bell method" — easy to find on YouTube.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>What comes home with my puppy?</span><div class="faq-icon">+</div></button><div class="faq-a">A goody bag with their favorite toys, food for the first few days, a blanket with mom and siblings' scent, a puppy health chart (vaccines & dewormer records), and a signed copy of the health guarantee.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>Will my doodle shed? Are they hypoallergenic?</span><div class="faq-icon">+</div></button><div class="faq-a">All dogs shed to some extent, but doodles are known for very minimal shedding. The curlier the coat, the less shedding. F1 doodles work well for mild allergies; F1b and F1bb are better for moderate allergies. We can advise on each puppy's likely coat type around 4 weeks.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>How do deposits and payment work?</span><div class="faq-icon">+</div></button><div class="faq-a">A $200–$400 nonrefundable but transferable deposit is accepted via Zelle, CashApp, or Cash. The remaining balance is due in CASH ONLY at pickup. For transported puppies, full payment is required 2–3 business days before departure via CashApp or Zelle. Contact Brooke at (260) 443-9035.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>Do you allow in-person visits?</span><div class="faq-icon">+</div></button><div class="faq-a">Yes! All visits are by appointment only, limited to 30 minutes. Puppies must be at least 6 weeks old. Please submit a completed application before your visit. We do not allow visits with multiple litters — choose 2–3 puppies to visit. Out-of-state families are welcome to FaceTime with us!</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span>Are puppies microchipped or AKC registered?</span><div class="faq-icon">+</div></button><div class="faq-a">Puppies are not microchipped — we leave that to you and your vet. Most doodles can be registered through the Continental Kennel Club (CKC). All sires and dams are genetic health tested — documentation available on request.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews-section" id="reviews">
+    <div class="section-inner">
+      <div class="reviews-header">
+        <div class="section-label">Happy Families</div>
+        <h2>What Our Families<br><em>Are Saying</em></h2>
+        <p>Real reviews from the families who've welcomed a Yarnelle Fur-Baby into their homes.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0031.png" alt="Review from Katie Hendrickson" style="width:100%;display:block;border-radius:2px;"></div>
+        <div class="review-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0032.png" alt="Review from Taylor Varnes" style="width:100%;display:block;border-radius:2px;"></div>
+        <div class="review-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0033.png" alt="Review from Ryann Grabher" style="width:100%;display:block;border-radius:2px;"></div>
+        <div class="review-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0034.png" alt="Review from Alex Bo Kim" style="width:100%;display:block;border-radius:2px;"></div>
+        <div class="review-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0035.png" alt="Review from Rachael Louise and Jenny Finney" style="width:100%;display:block;border-radius:2px;"></div>
+        <div class="review-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0036.png" alt="Review from Sami James" style="width:100%;display:block;border-radius:2px;"></div>
+        <div class="review-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0037.png" alt="Review from Bailey Dailey and Elizabeth Bower" style="width:100%;display:block;border-radius:2px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get in Touch &<br><em>Apply Today</em></h2>
+          <p>Ready to add a fur-baby to your family? Fill out the application and we'll be in touch. You can also reach out directly to the family member who raises the breed you're interested in.</p>
+          <div class="contact-cards">
+            <div class="contact-card"><div class="role">Owner</div><div class="cname">John Yarnelle</div><div class="cinfo"><a href="tel:2604107925">(260) 410-7925</a></div></div>
+            <div class="contact-card"><div class="role">Manager & Sales — Primary Contact</div><div class="cname">Brooke Labenz</div><div class="cinfo"><a href="tel:2604439035">(260) 443-9035</a> · <a href="mailto:yarnellefurbabies@gmail.com">yarnellefurbabies@gmail.com</a></div></div>
+            <div class="contact-card"><div class="role">Travis & Hannah Mullendore</div><div class="cinfo"><a href="tel:2604104149">(260) 410-4149</a></div></div>
+            <div class="contact-card"><div class="role">Hunter & Sarah Nicodemus</div><div class="cinfo"><a href="tel:2604940405">(260) 494-0405</a></div></div>
+            <div class="contact-card"><div class="role">Luke Yarnelle</div><div class="cinfo"><a href="tel:2602131685">(260) 213-1685</a></div></div>
+          </div>
+          <div style="margin-top:1.8rem; display:flex; flex-direction:column; gap:0.8rem; align-items:flex-start;">
+            <div style="background:var(--offwhite);border:1px solid var(--light-gray);border-left:3px solid var(--red);padding:1rem 1.2rem;margin-bottom:0.5rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--red);margin-bottom:0.4rem;">Delivery Options</div>
+              <p style="font-size:0.88rem;color:var(--text);line-height:1.6;"><strong>Ground Transport</strong> — available for local & regional delivery.<br><strong>Air Transport (Puppy Nanny)</strong> — Luke Yarnelle personally flies your puppy to you anywhere in the US. Contact Brooke for pricing & scheduling.</p>
+            </div>
+            <a href="https://www.instagram.com/yarnellefurbabies/" target="_blank" class="btn-secondary">Follow on Instagram</a>
+          </div>
+        </div>
+        <div>
+          <form class="app-form" name="puppy-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+            <input type="hidden" name="form-name" value="puppy-application" />
+            <p style="display:none;"><label>Do not fill this out: <input name="bot-field" /></label></p>
+            <h3>Puppy Application</h3>
+            <p>Please complete before scheduling a visit or placing a deposit.</p>
+            <div class="form-row">
+              <div class="form-group"><label>First Name *</label><input type="text" name="first-name" required /></div>
+              <div class="form-group"><label>Last Name *</label><input type="text" name="last-name" required /></div>
+            </div>
+            <div class="form-group"><label>Email *</label><input type="email" name="email" required /></div>
+            <div class="form-group"><label>Phone *</label><input type="tel" name="phone" required /></div>
+            <div class="form-group"><label>City &amp; State *</label><input type="text" name="city-state" required /></div>
+            <div class="form-group">
+              <label>Which breed or litter? *</label>
+              <select name="breed" required>
+                <option value="">Select a breed...</option>
+                <option>Saint Berdoodles — John & Kathy (Lucy)</option>
+                <option>Toy Aussiedoodles — John & Kathy</option>
+                <option>Mini F1B Bernedoodles — John & Kathy</option>
+                <option>Merle Mini F1BB Goldendoodles — John & Kathy</option>
+                <option>Mini Multigen Bernedoodles — Luke & Eli</option>
+                <option>Saint Berdoodles (Blake) — Luke & Eli</option>
+                <option>F1 Colliedoodles — Luke & Eli</option>
+                <option>Cavapoos — Dakoda & Brooke</option>
+                <option>Micro Mini Goldendoodles — Hunter & Sarah</option>
+                <option>Medium F1B Bernedoodles — Hunter & Sarah</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Rent or Own?</label><select name="rent-or-own"><option>Own</option><option>Rent</option></select></div>
+              <div class="form-group"><label>Purpose *</label><select name="purpose" required><option>Family Pet</option><option>Breeding Prospect</option><option>Therapy / Service Animal</option><option>Show Prospect</option></select></div>
+            </div>
+            <div class="form-group"><label>Owned a dog before? *</label><select name="owned-dog-before" required><option>Yes</option><option>No</option></select></div>
+            <div class="form-group"><label>Veterinarian name &amp; phone</label><input type="text" name="veterinarian" /></div>
+            <div class="form-group"><label>Other pets? (breed, age, gender)</label><input type="text" name="other-pets" /></div>
+            <div class="form-group"><label>How did you hear about us? *</label><select name="how-heard" required><option value="">Select...</option><option>Google</option><option>Instagram</option><option>Facebook</option><option>Friend / Word of Mouth</option><option>Other</option></select></div>
+            <div class="form-group"><label>Tell us about your family</label><textarea name="about-family" placeholder="Names, ages of household members, lifestyle, etc."></textarea></div>
+            <button type="submit" class="btn-primary" style="width:100%">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Yarnelle <em>Fur-Babies</em></div>
+      <p class="footer-tagline">Columbia City, Indiana · Family-Raised Doodles with Love</p>
+      <div class="footer-links">
+        <a onclick="scrollToSection('breeds')">Available Puppies</a>
+        <a onclick="scrollToSection('process')">Adoption Process</a>
+        <a onclick="scrollToSection('about')">Our Family</a>
+        <a onclick="scrollToSection('facility')">Our Facility</a>
+        <a onclick="scrollToSection('faq')">FAQ</a>
+        <a onclick="scrollToSection('contact')">Apply Now</a>
+        <a onclick="showPage('got-jesus')">Got Jesus?</a>
+      </div>
+      <a href="https://www.instagram.com/yarnellefurbabies/" target="_blank" class="footer-social">📷 @yarnellefurbabies</a><br/>
+      <div class="footer-copy">© 2025 Yarnelle Fur-Babies · Columbia City, IN · All rights reserved.</div>
+    </div>
+  </footer>
+
+</div><!-- end home page -->
+
+
+<!-- ══════════════════════════════════
+     GOT JESUS PAGE
+══════════════════════════════════ -->
+<div id="page-got-jesus" class="page">
+  <div style="padding-top: 94px; min-height: 100vh;">
+
+    <!-- Hero -->
+    <div style="background: var(--black); color: #fff; padding: 4rem 2rem 5rem; text-align: center;">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <button class="back-btn" onclick="showPage('home')" style="margin: 0 auto 1.5rem;">← Back to Home</button>
+        <p style="font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red-light); margin-bottom: 1rem;">Faith & Family</p>
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; color: #fff; font-style: italic; line-height: 1.1;">Got Jesus?</h1>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div style="max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem;">
+
+      <div style="background: var(--offwhite); border: 1px solid var(--light-gray); border-left: 4px solid var(--red); padding: 2rem 2.5rem; margin-bottom: 3.5rem; border-radius: 2px;">
+        <p style="font-size: 1.05rem; color: var(--text); line-height: 1.85;">
+          I know what you are thinking… this has nothing to do with our page. The truth is, it has <em>everything</em> to do with not only our page, but the care that is provided to each of our puppies. We are a very close-knit family raised on our family farm in Indiana. We were all blessed to be able to grow up in a small Lutheran church & school. We give all the thanks to the Lord above!
+        </p>
+        <p style="margin-top: 1.2rem; font-size: 1.05rem; color: var(--text); line-height: 1.85; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;">Please enjoy some of our favorite Bible verses.</p>
+      </div>
+
+      <!-- Verses -->
+      <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+
+        <div style="border-bottom: 1px solid var(--light-gray); padding-bottom: 2.5rem;">
+          <p style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem;">John 3:16</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 300; color: var(--black); line-height: 1.5; font-style: italic;">
+            "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."
+          </p>
+        </div>
+
+        <div style="border-bottom: 1px solid var(--light-gray); padding-bottom: 2.5rem;">
+          <p style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem;">Jeremiah 29:11</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 300; color: var(--black); line-height: 1.5; font-style: italic;">
+            "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
+          </p>
+        </div>
+
+        <div style="border-bottom: 1px solid var(--light-gray); padding-bottom: 2.5rem;">
+          <p style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem;">1 Corinthians 13:13</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 300; color: var(--black); line-height: 1.5; font-style: italic;">
+            "And now these three remain: faith, hope and love. But the greatest of these is love."
+          </p>
+        </div>
+
+        <div style="padding-bottom: 1rem;">
+          <p style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.6rem;">Psalm 23:4</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 300; color: var(--black); line-height: 1.8; font-style: italic;">
+            "Even though I walk through the darkest valley,<br>
+            I will fear no evil,<br>
+            for you are with me;<br>
+            your rod and your staff,<br>
+            they comfort me."
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Back to site -->
+      <div style="margin-top: 3.5rem; text-align: center; padding-top: 2.5rem; border-top: 1px solid var(--light-gray);">
+        <button class="btn-primary" onclick="showPage('home')">Back to Our Puppies</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     BREED DETAIL PAGES
+══════════════════════════════════ -->
+
+<!-- SAINT BERDOODLES - LUCY -->
+<div id="page-saint-lucy" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">John & Kathy Yarnelle</div>
+        <h1>Saint Berdoodles</h1>
+        <div class="breed-hero-price">$1,200 – $2,000</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section">
+            <h2>Current Litter — Lucy × Bonsai</h2>
+            <div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0038.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Leena" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0039.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Lilly" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0040.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Liam" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0041.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Lachlan" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0042.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Laiken" />
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">January 7, 2026</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">March 4, 2026</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">75–90+ lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 4 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos</div></div>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2>Available Puppies</h2>
+            <div class="puppy-list">
+              <div class="puppy-item"><span class="pname">Leena</span><span class="pgender">Girl</span><span class="pprice">$1,200</span></div>
+              <div class="puppy-item"><span class="pname">Lilly</span><span class="pgender">Girl</span><span class="pprice">$1,200</span></div>
+              <div class="puppy-item"><span class="pname">Liam</span><span class="pgender">Boy</span><span class="pprice">$1,200</span></div>
+              <div class="puppy-item"><span class="pname">Lachlan</span><span class="pgender">Boy</span><span class="pprice">$1,200</span></div>
+              <div class="puppy-item"><span class="pname">Laiken</span><span class="pgender">Girl</span><span class="pprice">$2,000</span></div>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card">
+                <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0043.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Lucy - Dam" />
+                <div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Lucy</div><div class="parent-detail">Standard F1 Saint Berdoodle · 100 lbs</div></div>
+              </div>
+              <div class="parent-card">
+                <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0044.jpg" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Bonsai - Sire" />
+                <div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Bonsai</div><div class="parent-detail">AKC Blue Merle Standard Poodle · 60 lbs</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2>Previous Saint Berdoodle Puppies</h2>
+            <div class="prev-gallery">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0045.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0046.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0047.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0048.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0049.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0050.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0051.png" style="grid-column:span 2;width:100%;aspect-ratio:2/1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+            </div>
+          </div>
+        </div>
+
+        <div class="breed-sidebar">
+          <div class="sidebar-card">
+            <h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1B</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Standard (75–90+ lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">March 4, 2026</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Kathy · (260) 410-7925</span></div>
+          </div>
+          <div class="sidebar-card">
+            <h3>Reserve a Puppy</h3>
+            <div class="sidebar-cta">
+              <a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a>
+              <button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button>
+              <p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits now. Nonrefundable but transferable. Deposit goes toward total cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOY AUSSIEDOODLES -->
+<div id="page-aussiedoodle" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">John & Kathy Yarnelle · F1</div>
+        <h1>Toy Aussiedoodles</h1>
+        <div class="breed-hero-price">$1,200 – $1,800</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section">
+            <h2>Current Litter — Jojo × Ash</h2>
+            <div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0052.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Jacob" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0053.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Jade" />
+            </div>
+          </div>
+          <div class="info-section">
+            <h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">December 13, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">February 7, 2026</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">10–15 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 4–6 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Intelligent, friendly, affectionate, playful</div></div>
+            </div>
+          </div>
+          <div class="info-section">
+            <h2>Available Puppies</h2>
+            <div class="puppy-list">
+              <div class="puppy-item"><span class="pname">Jacob</span><span class="pgender">Boy</span><span class="pprice">$1,200</span></div>
+              <div class="puppy-item"><span class="pname">Jade</span><span class="pgender">Girl</span><span class="pprice">$1,800</span></div>
+            </div>
+          </div>
+          <div class="info-section">
+            <h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0054.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Jojo - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Jojo</div><div class="parent-detail">Blue Merle Toy Australian Shepherd · 12 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0055.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Ash - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Ash</div><div class="parent-detail">Cream Toy Poodle · 9 lbs</div></div></div>
+            </div>
+          </div>
+          <div class="info-section">
+            <h2>Jojo & Ash's Previous Puppies</h2>
+            <div class="prev-gallery">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0056.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Aussiedoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0057.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Aussiedoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0058.png" style="grid-column:span 2;width:100%;aspect-ratio:2/1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Aussiedoodle" />
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Toy (10–15 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Feb 7, 2026</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Brooke · (260) 443-9035</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MINI F1B BERNEDOODLES -->
+<div id="page-mini-berne" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">John & Kathy Yarnelle · F1B</div>
+        <h1>Mini F1B Bernedoodles</h1>
+        <div class="breed-hero-price">$1,200</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Flower × Sycamore</h2><div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0059.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Finnigan" />
+            </div><p style="font-size:0.9rem; color:var(--text-light); margin-top: 0.5rem; font-style: italic;">This is Flower and Sycamore's first litter together!</p></div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">November 18, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">Ready Now!</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">30–40 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 3 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Very intelligent, loyal, eager to please, playful, sweet, and love to cuddle</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2><div class="puppy-list"><div class="puppy-item"><span class="pname">Finnigan</span><span class="pgender">Boy</span><span class="pprice">$1,200</span></div></div></div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0060.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Flower - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Flower</div><div class="parent-detail">AKC Tri Parti Standard Poodle · 38 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0061.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Sycamore - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Sycamore</div><div class="parent-detail">Mini F1 Tricolored Bernedoodle · 40 lbs</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1B</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Mini (30–40 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Ready Now!</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Brooke · (260) 443-9035</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GOLDENDOODLES -->
+<div id="page-goldendoodle" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">John & Kathy Yarnelle · F1BB</div>
+        <h1>Merle Mini F1BB Goldendoodles</h1>
+        <div class="breed-hero-price">$800</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Princess Diana × Billy</h2><div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0062.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Patty" />
+            </div><p style="font-size:0.9rem; color:var(--text-light); margin-top: 0.5rem; font-style: italic;">This is Princess Diana and Billy's first litter together!</p></div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">November 11, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">Ready Now!</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">30–40 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 3–4 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Smart, playful, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2><div class="puppy-list"><div class="puppy-item"><span class="pname">Patty</span><span class="pgender">Girl</span><span class="pprice">$800</span></div></div></div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0063.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Princess Diana - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Princess Diana</div><div class="parent-detail">AKC Sable Parti Standard Poodle · 44 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0064.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Billy - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Billy</div><div class="parent-detail">Mini Blue Merle F1B Goldendoodle · 23 lbs</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1BB</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Mini (30–40 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Ready Now!</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Brooke · (260) 443-9035</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MULTIGEN BERNEDOODLES -->
+<div id="page-multigen-berne" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">Luke & Eli Yarnelle · Multigen</div>
+        <h1>Mini Multigen Bernedoodles</h1>
+        <div class="breed-hero-price">$800</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Meadow May × Sycamore</h2><div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0065.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Milo" />
+            </div><p style="font-size:0.9rem; color:var(--text-light); margin-top: 0.5rem; font-style: italic;">This is Meadow and Sycamore's first litter together!</p></div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">October 27, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">Ready Now!</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">40–45 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 4–6 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Very intelligent, energetic, playful, sweet, and love to cuddle</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2><div class="puppy-list"><div class="puppy-item"><span class="pname">Milo</span><span class="pgender">Boy</span><span class="pprice">$800</span></div></div></div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0066.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Meadow May - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Meadow May</div><div class="parent-detail">Mini F1 Tricolored Bernedoodle · 37 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0067.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Sycamore - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Sycamore</div><div class="parent-detail">Mini F1 Tricolored Bernedoodle · 40 lbs</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">Multigen</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Mini (40–45 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Ready Now!</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Luke · (260) 213-1685</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAINT BERDOODLES - BLAKE -->
+<div id="page-saint-blake" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">Luke & Eli Yarnelle · Standard F1B</div>
+        <h1>Saint Berdoodles — Blake</h1>
+        <div class="breed-hero-price">$1,000 – $2,000</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Blake × Bamboo</h2><div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0068.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Benson" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0069.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Ben" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0070.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Beckett" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0071.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Brody" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0072.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Bentley" />
+            </div></div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">December 11, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">February 5, 2026</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">75+ lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 4–6 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2>
+            <div class="puppy-list">
+              <div class="puppy-item"><span class="pname">Brody</span><span class="pgender">Boy</span><span class="pprice">$1,000</span></div>
+              <div class="puppy-item"><span class="pname">Beckett</span><span class="pgender">Boy</span><span class="pprice">$1,000</span></div>
+              <div class="puppy-item"><span class="pname">Bentley</span><span class="pgender">Boy</span><span class="pprice">$1,200</span></div>
+              <div class="puppy-item"><span class="pname">Ben</span><span class="pgender">Boy</span><span class="pprice">$1,600</span></div>
+              <div class="puppy-item"><span class="pname">Benson</span><span class="pgender">Boy</span><span class="pprice">$1,800</span></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0073.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Blake - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Blake</div><div class="parent-detail">Standard F1 Saint Berdoodle · 95 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0074.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Bamboo - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Bamboo</div><div class="parent-detail">AKC Standard Sable Parti Poodle · 62 lbs</div></div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Previous Saint Berdoodle Puppies</h2>
+            <div class="prev-gallery">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0075.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0076.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0077.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0078.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0079.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0080.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0081.png" style="grid-column:span 2;width:100%;aspect-ratio:2/1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Saint Berdoodle" />
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1B</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Standard (75+ lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Feb 5, 2026</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Brooke · (260) 443-9035</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COLLIEDOODLES -->
+<div id="page-colliedoodle" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">Luke & Eli Yarnelle · F1</div>
+        <h1>F1 Colliedoodles</h1>
+        <div class="breed-hero-price">$650</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Liberty × Thomas</h2><div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0082.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Lucas" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0083.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Logan" />
+            </div><p style="font-size:0.9rem; color:var(--text-light); margin-top: 0.5rem; font-style: italic;">This is Liberty and Thomas' first litter together!</p></div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">November 24, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">Ready Now!</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">50–60 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">TBD per coat type</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Extremely affectionate, smart, playful, love to cuddle, incredibly friendly with other dogs, cats, and kiddos</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2><div class="puppy-list"><div class="puppy-item"><span class="pname">Lucas</span><span class="pgender">Boy</span><span class="pprice">$650</span></div><div class="puppy-item"><span class="pname">Logan</span><span class="pgender">Boy</span><span class="pprice">$650</span></div></div></div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0084.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Liberty - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Liberty</div><div class="parent-detail">Tri Rough Coat Collie · 50 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0085.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Thomas - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Thomas</div><div class="parent-detail">AKC Chocolate Phantom Standard Poodle · 60 lbs</div></div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Previous Colliedoodle Puppies (Full Grown)</h2><p style="font-size:0.85rem; color:var(--text-light); margin-bottom:1rem; font-style:italic;">Note: These are sable colliedoodles — coloring will differ from the current tri litter.</p>
+            <div class="prev-gallery">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0086.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Colliedoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0087.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Colliedoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0088.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Colliedoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0089.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Colliedoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0090.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Colliedoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0091.png" style="grid-column:span 2;width:100%;aspect-ratio:2/1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Colliedoodle" />
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Standard (50–60 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Ready Now!</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Luke · (260) 213-1685</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAVAPOOS -->
+<div id="page-cavapoo" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">Dakoda & Brooke Labenz · F1B</div>
+        <h1>Cavapoos</h1>
+        <div class="breed-hero-price">$2,000</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Honey × Teddy</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Hayes</div>
+                <div class="puppy-carousel" id="hayesCarousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0092.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;border-radius:6px;" alt="Hayes" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0093.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hayes" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0094.jpg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hayes" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0095.jpg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hayes" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0096.jpg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hayes" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('hayesCarousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('hayesCarousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('hayesCarousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('hayesCarousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('hayesCarousel', 2)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('hayesCarousel', 3)"></span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Hank</div>
+                <div class="puppy-carousel" id="hankCarousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0097.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;border-radius:6px;" alt="Hank" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0098.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hank" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0099.jpg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hank" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0100.jpg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hank" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0101.jpg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Hank" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('hankCarousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('hankCarousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('hankCarousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('hankCarousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('hankCarousel', 2)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('hankCarousel', 3)"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">January 20, 2026</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">March 17–31, 2026</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">7–10 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 3 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Intelligent, outgoing, loving, friendly, great with kiddos, and playful</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2><div class="puppy-list"><div class="puppy-item"><span class="pname">Hayes</span><span class="pgender">Boy</span><span class="pprice">$2,000</span></div><div class="puppy-item"><span class="pname">Hank</span><span class="pgender">Boy</span><span class="pprice">$2,000</span></div></div></div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0102.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Honey - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Honey</div><div class="parent-detail">Red Cavapoo · 7 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0103.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Teddy - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Teddy</div><div class="parent-detail">AKC Red Mini Poodle · 9 lbs</div></div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Honey's Previous Puppies Full Grown</h2>
+            <div class="prev-gallery">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0104.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Cavapoo" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0105.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Cavapoo" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0106.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Cavapoo" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0107.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Cavapoo" />
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1B</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Toy (7–10 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Mar 17–31, 2026</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Brooke · (260) 443-9035</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$BrookeLabenz" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MICRO MINI GOLDENDOODLES -->
+<div id="page-micro-golden" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">Hunter & Sarah Nicodemus · F1B</div>
+        <h1>Micro Mini Goldendoodles</h1>
+        <div class="breed-hero-price">$1,500</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Helga × Cedar</h2><div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0108.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Helena" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0109.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Hadassah" />
+            </div></div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">November 17, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">Ready Now!</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">15–20 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Roughly every 3–4 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Smart, playful, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2><div class="puppy-list"><div class="puppy-item"><span class="pname">Helena</span><span class="pgender">Girl</span><span class="pprice">$1,500</span></div><div class="puppy-item"><span class="pname">Hadassah</span><span class="pgender">Girl</span><span class="pprice">$1,500</span></div></div></div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0110.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Helga - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Helga</div><div class="parent-detail">Mini F1 Goldendoodle · 25 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0111.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Cedar - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Cedar</div><div class="parent-detail">AKC Red Mini Poodle · 17 lbs</div></div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Previous Helga & Cedar Puppies</h2>
+            <div class="prev-gallery">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0112.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Goldendoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0113.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Goldendoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0114.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Goldendoodle" />
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0115.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Previous Goldendoodle" />
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1B</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Micro Mini (15–20 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Ready Now!</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Sarah · (260) 494-0405</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEDIUM BERNEDOODLES -->
+<div id="page-medium-berne" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">Hunter & Sarah Nicodemus · F1B</div>
+        <h1>Medium F1B Bernedoodles</h1>
+        <div class="breed-hero-price">$1,500</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section"><h2>Current Litter — Sky × Thor</h2><div class="puppy-photos">
+              <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0116.png" style="width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f7;padding:6px;" alt="Scarlett" />
+            </div><p style="font-size:0.9rem; color:var(--text-light); margin-top: 0.5rem; font-style: italic;">This is Sky and Thor's first litter together!</p></div>
+          <div class="info-section"><h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">November 25, 2025</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">Ready Now!</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">40–50 lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">TBD per coat type</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Loyal, affectionate, "velcro dogs," intelligent, playful, and gentle</div></div>
+            </div>
+          </div>
+          <div class="info-section"><h2>Available Puppies</h2><div class="puppy-list"><div class="puppy-item"><span class="pname">Scarlett</span><span class="pgender">Girl</span><span class="pprice">$1,500</span></div></div></div>
+          <div class="info-section"><h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0117.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Sky - Dam" /><div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Sky</div><div class="parent-detail">Mini F1 Bernedoodle · 33 lbs</div></div></div>
+              <div class="parent-card"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0118.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Thor - Sire" /><div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Thor</div><div class="parent-detail">AKC Chocolate Standard Poodle · 51 lbs</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="breed-sidebar">
+          <div class="sidebar-card"><h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1B</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Medium (40–50 lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">Ready Now!</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Sarah · (260) 494-0405</span></div>
+          </div>
+          <div class="sidebar-card"><h3>Reserve a Puppy</h3><div class="sidebar-cta"><a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a><button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button><p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits. Nonrefundable but transferable.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAINT BERDOODLES - GRACIE & PUMPKIN -->
+<div id="page-saint-gracie" class="page">
+  <div class="breed-page">
+    <div class="breed-hero">
+      <div class="breed-hero-inner">
+        <button class="back-btn" onclick="showPage('home')">← Back to All Puppies</button>
+        <div class="breed-hero-meta">Dakoda & Brooke Labenz · Standard F1B</div>
+        <h1>Saint Berdoodles — Gracie</h1>
+        <div class="breed-hero-price">$1,850 – $2,000</div>
+      </div>
+    </div>
+    <div class="breed-content">
+      <div class="breed-layout">
+        <div>
+          <div class="info-section">
+            <h2>Current Litter — Gracie × Pumpkin</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Gunner</div>
+                <div class="puppy-carousel" id="graciePup1Carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0119.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy 1" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0120.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group 1" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0121.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('graciePup1Carousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('graciePup1Carousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('graciePup1Carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup1Carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup1Carousel', 2)"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Gemma</div>
+                <div class="puppy-carousel" id="graciePup2Carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0122.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy 2" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0123.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group 2" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0124.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('graciePup2Carousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('graciePup2Carousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('graciePup2Carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup2Carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup2Carousel', 2)"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Grady</div>
+                <div class="puppy-carousel" id="graciePup3Carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0125.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy 3" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0126.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group 3" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0127.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('graciePup3Carousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('graciePup3Carousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('graciePup3Carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup3Carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup3Carousel', 2)"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Granger</div>
+                <div class="puppy-carousel" id="graciePup4Carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0128.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy 4" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0129.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group 4" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0130.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('graciePup4Carousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('graciePup4Carousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('graciePup4Carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup4Carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup4Carousel', 2)"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Graham</div>
+                <div class="puppy-carousel" id="graciePup5Carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0131.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy 5" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0132.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group 5" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0133.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('graciePup5Carousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('graciePup5Carousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('graciePup5Carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup5Carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup5Carousel', 2)"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Georgia</div>
+                <div class="puppy-carousel" id="graciePup6Carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0134.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy 6" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0135.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group 6" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0136.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('graciePup6Carousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('graciePup6Carousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('graciePup6Carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup6Carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup6Carousel', 2)"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="grid-column:1/-1;max-width:400px;margin:0 auto;width:100%;">
+                <div style="text-align:center;font-weight:600;margin-bottom:6px;">Gianna</div>
+                <div class="puppy-carousel" id="graciePup7Carousel">
+                  <div class="carousel-track">
+                    <div class="carousel-slide active"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0137.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy 7" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0138.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group 7" /></div>
+                    <div class="carousel-slide"><img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0139.png" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Group" /></div>
+                  </div>
+                  <button class="carousel-btn carousel-prev" onclick="moveCarousel('graciePup7Carousel', -1)">&#8592;</button>
+                  <button class="carousel-btn carousel-next" onclick="moveCarousel('graciePup7Carousel', 1)">&#8594;</button>
+                  <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="goToSlide('graciePup7Carousel', 0)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup7Carousel', 1)"></span>
+                    <span class="carousel-dot" onclick="goToSlide('graciePup7Carousel', 2)"></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2>Litter Details</h2>
+            <div class="info-grid">
+              <div class="info-item"><div class="label">Date of Birth</div><div class="value">February 1, 2026</div></div>
+              <div class="info-item"><div class="label">Take Home Date</div><div class="value">March 29, 2026</div></div>
+              <div class="info-item"><div class="label">Estimated Size</div><div class="value">75–90+ lbs</div></div>
+              <div class="info-item"><div class="label">Grooming</div><div class="value">Every 3–4 months</div></div>
+              <div class="info-item" style="grid-column:1/-1"><div class="label">Temperament</div><div class="value">Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos</div></div>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2>Available Puppies</h2>
+            <div class="puppy-list">
+              <div class="puppy-item"><span class="pname">Gunner</span><span class="pgender">Boy</span><span class="pprice">$2,000</span></div>
+              <div class="puppy-item"><span class="pname">Gemma</span><span class="pgender">Girl</span><span class="pprice">$2,000</span></div>
+              <div class="puppy-item"><span class="pname">Grady</span><span class="pgender">Boy</span><span class="pprice">$1,850</span></div>
+              <div class="puppy-item"><span class="pname">Granger</span><span class="pgender">Boy</span><span class="pprice">$1,850</span></div>
+              <div class="puppy-item"><span class="pname">Graham</span><span class="pgender">Boy</span><span class="pprice">$1,850</span></div>
+              <div class="puppy-item"><span class="pname">Georgia</span><span class="pgender">Girl</span><span class="pprice">$1,850</span></div>
+              <div class="puppy-item"><span class="pname">Gianna</span><span class="pgender">Girl</span><span class="pprice">$1,850</span></div>
+            </div>
+          </div>
+
+          <div class="info-section">
+            <h2>Meet the Parents</h2>
+            <div class="parents-grid">
+              <div class="parent-card">
+                <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0140.png" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Gracie - Dam" />
+                <div class="parent-info"><div class="parent-role">Dam</div><div class="parent-name">Gracie</div><div class="parent-detail">F1B Saint Berdoodle · 65 lbs</div></div>
+              </div>
+              <div class="parent-card">
+                <img src="https://res.cloudinary.com/dyzfpnrhg/image/upload/yarnelle-fur-babies/images/image_0141.jpg" style="width:100%;height:220px;object-fit:contain;background:#f7f7f7;padding:8px;" alt="Pumpkin - Sire" />
+                <div class="parent-info"><div class="parent-role">Sire</div><div class="parent-name">Pumpkin</div><div class="parent-detail">Standard Poodle · 65 lbs</div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="breed-sidebar">
+          <div class="sidebar-card">
+            <h3>Quick Facts</h3>
+            <div class="sidebar-detail"><span class="sd-label">Generation</span><span class="sd-value">F1B</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Size</span><span class="sd-value">Standard (75–90+ lbs)</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Deposit</span><span class="sd-value">$400</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Ready</span><span class="sd-value">March 29, 2026</span></div>
+            <div class="sidebar-detail"><span class="sd-label">Contact</span><span class="sd-value">Brooke · (260) 443-9035</span></div>
+          </div>
+          <div class="sidebar-card">
+            <h3>Reserve a Puppy</h3>
+            <div class="sidebar-cta">
+              <a href="https://cash.app/$YarnelleFurBabies1" target="_blank" class="btn-primary" style="text-align:center">Reserve via CashApp</a>
+              <button class="btn-secondary" onclick="showPage('home'); scrollToSection('contact')" style="text-align:center">Submit Application</button>
+              <p style="font-size:0.8rem;color:var(--text-light)">Accepting $400 deposits now. Nonrefundable but transferable. Deposit goes toward total cost.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Page navigation
+  function showPage(id, pushState = true) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    initFadeIns();
+    if (pushState) {
+      history.pushState({ page: id }, '', '#' + id);
+    }
+  }
+
+  function showBreed(id) {
+    showPage(id);
+  }
+
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      setTimeout(() => {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', function(e) {
+    if (e.state && e.state.page) {
+      showPage(e.state.page, false);
+    } else {
+      showPage('home', false);
+    }
+  });
+
+  // Set initial history state on load
+  window.addEventListener('load', function() {
+    const hash = window.location.hash.replace('#', '');
+    const pageEl = hash ? document.getElementById('page-' + hash) : null;
+    if (pageEl) {
+      showPage(hash, false);
+    }
+    history.replaceState({ page: hash || 'home' }, '', window.location.href);
+  });
+
+  function closeMobile() {
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  // Fade-in animations
+  function initFadeIns() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
+  }
+  
+  initFadeIns();
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('[type=submit]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const formData = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      btn.textContent = '✓ Application Submitted!';
+      btn.style.background = '#1a7a1a';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = 'Submit Application';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 6000);
+    })
+    .catch(() => {
+      btn.textContent = 'Error — Please Try Again';
+      btn.style.background = '#c0392b';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = 'Submit Application';
+        btn.style.background = '';
+      }, 5000);
+    });
+  }
+
+  // Carousel functionality
+  var carouselState = {};
+  function initCarousel(id) {
+    if (!carouselState[id]) {
+      carouselState[id] = 0;
+      var slides = document.querySelectorAll('#' + id + ' .carousel-slide');
+      if (slides.length > 0) slides[0].classList.add('active');
+    }
+  }
+  function moveCarousel(id, dir) {
+    initCarousel(id);
+    var slides = document.querySelectorAll('#' + id + ' .carousel-slide');
+    var dots = document.querySelectorAll('#' + id + ' .carousel-dot');
+    slides[carouselState[id]].classList.remove('active');
+    if (dots.length) dots[carouselState[id]].classList.remove('active');
+    carouselState[id] = (carouselState[id] + dir + slides.length) % slides.length;
+    slides[carouselState[id]].classList.add('active');
+    if (dots.length) dots[carouselState[id]].classList.add('active');
+  }
+  function goToSlide(id, idx) {
+    initCarousel(id);
+    var slides = document.querySelectorAll('#' + id + ' .carousel-slide');
+    var dots = document.querySelectorAll('#' + id + ' .carousel-dot');
+    slides[carouselState[id]].classList.remove('active');
+    if (dots.length) dots[carouselState[id]].classList.remove('active');
+    carouselState[id] = idx;
+    slides[carouselState[id]].classList.add('active');
+    if (dots.length) dots[carouselState[id]].classList.add('active');
+  }
+  document.addEventListener('DOMContentLoaded', function() { initCarousel('hayesCarousel'); initCarousel('hankCarousel'); });
+</script>
+</body>
+</html>
