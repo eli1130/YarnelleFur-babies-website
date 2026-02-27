@@ -9,62 +9,63 @@ public_folder: "images"
 collections:
   - name: "litters"
     label: "Litters"
-    label_singular: "Litter"
-    file: "_data/litters.json"
-    description: "Manage all available litters and puppies"
-    fields:
-      - name: "litters"
-        label: "Litters"
-        widget: "list"
-        label_singular: "Litter"
+    files:
+      - name: "all_litters"
+        label: "All Litters"
+        file: "_data/litters.json"
         fields:
-          - { name: "id", label: "Page ID (no spaces, use dashes)", widget: "string", hint: "e.g. saint-lucy — must be unique, no spaces" }
-          - { name: "breedName", label: "Breed Name", widget: "string", hint: "e.g. Saint Berdoodles" }
-          - { name: "family", label: "Family", widget: "string", hint: "e.g. John & Kathy Yarnelle" }
-          - { name: "generation", label: "Generation", widget: "string", hint: "e.g. F1B" }
-          - { name: "description", label: "Card Description", widget: "string", hint: "Short description shown on the breed card" }
-          - { name: "priceRange", label: "Price Range", widget: "string", hint: "e.g. $1,200 – $2,000 or just $1,500" }
-          - { name: "cardImage", label: "Card Image URL", widget: "string", hint: "Cloudinary URL for the breed card thumbnail" }
-          - { name: "litterTitle", label: "Litter Title", widget: "string", hint: "e.g. Lucy × Bonsai" }
-          - { name: "dateOfBirth", label: "Date of Birth", widget: "string", hint: "e.g. January 7, 2026" }
-          - { name: "takeHomeDate", label: "Take Home Date", widget: "string", hint: "e.g. March 4, 2026 or Ready Now!" }
-          - { name: "estimatedSize", label: "Estimated Size", widget: "string", hint: "e.g. 75–90+ lbs" }
-          - { name: "grooming", label: "Grooming", widget: "string", hint: "e.g. Roughly every 4 months" }
-          - { name: "temperament", label: "Temperament", widget: "string" }
-          - { name: "deposit", label: "Deposit Amount", widget: "string", hint: "e.g. $400" }
-          - { name: "contact", label: "Contact", widget: "string", hint: "e.g. Kathy · (260) 410-7925" }
-          - { name: "cashAppLink", label: "CashApp Link", widget: "string" }
-          - { name: "firstLitterNote", label: "First Litter Note (optional)", widget: "string", required: false, hint: "e.g. This is Flower and Sycamore's first litter together!" }
-          - name: "puppyPhotos"
-            label: "Puppy Photos"
+          - name: "litters"
+            label: "Litters"
             widget: "list"
+            label_singular: "Litter"
             fields:
-              - { name: "name", label: "Puppy Name", widget: "string" }
-              - { name: "image", label: "Photo URL", widget: "string", hint: "Cloudinary URL for this puppy's photo" }
-          - name: "availablePuppies"
-            label: "Available Puppies"
-            widget: "list"
-            fields:
-              - { name: "name", label: "Name", widget: "string" }
-              - { name: "gender", label: "Gender", widget: "select", options: ["Boy", "Girl"] }
-              - { name: "price", label: "Price", widget: "string", hint: "e.g. $1,500" }
-          - name: "dam"
-            label: "Dam (Mom)"
-            widget: "object"
-            fields:
-              - { name: "name", label: "Name", widget: "string" }
-              - { name: "detail", label: "Detail", widget: "string", hint: "e.g. Standard F1 Saint Berdoodle · 100 lbs" }
-              - { name: "image", label: "Photo URL", widget: "string" }
-          - name: "sire"
-            label: "Sire (Dad)"
-            widget: "object"
-            fields:
-              - { name: "name", label: "Name", widget: "string" }
-              - { name: "detail", label: "Detail", widget: "string" }
-              - { name: "image", label: "Photo URL", widget: "string" }
-          - { name: "previousGalleryTitle", label: "Previous Gallery Title (optional)", widget: "string", required: false }
-          - name: "previousGallery"
-            label: "Previous Litter Gallery Photos (optional)"
-            widget: "list"
-            field: { name: "url", label: "Photo URL", widget: "string" }
-            required: false
+              - { name: "id", label: "Page ID (no spaces, use dashes)", widget: "string" }
+              - { name: "breedName", label: "Breed Name", widget: "string" }
+              - { name: "family", label: "Family", widget: "string" }
+              - { name: "generation", label: "Generation", widget: "string" }
+              - { name: "description", label: "Card Description", widget: "string" }
+              - { name: "priceRange", label: "Price Range", widget: "string" }
+              - { name: "cardImage", label: "Card Image URL", widget: "string" }
+              - { name: "litterTitle", label: "Litter Title", widget: "string" }
+              - { name: "dateOfBirth", label: "Date of Birth", widget: "string" }
+              - { name: "takeHomeDate", label: "Take Home Date", widget: "string" }
+              - { name: "estimatedSize", label: "Estimated Size", widget: "string" }
+              - { name: "grooming", label: "Grooming", widget: "string" }
+              - { name: "temperament", label: "Temperament", widget: "string" }
+              - { name: "deposit", label: "Deposit Amount", widget: "string" }
+              - { name: "contact", label: "Contact", widget: "string" }
+              - { name: "cashAppLink", label: "CashApp Link", widget: "string" }
+              - { name: "firstLitterNote", label: "First Litter Note (optional)", widget: "string", required: false }
+              - name: "puppyPhotos"
+                label: "Puppy Photos"
+                widget: "list"
+                fields:
+                  - { name: "name", label: "Puppy Name", widget: "string" }
+                  - { name: "image", label: "Photo URL", widget: "string" }
+              - name: "availablePuppies"
+                label: "Available Puppies"
+                widget: "list"
+                fields:
+                  - { name: "name", label: "Name", widget: "string" }
+                  - { name: "gender", label: "Gender", widget: "select", options: ["Boy", "Girl"] }
+                  - { name: "price", label: "Price", widget: "string" }
+              - name: "dam"
+                label: "Dam (Mom)"
+                widget: "object"
+                fields:
+                  - { name: "name", label: "Name", widget: "string" }
+                  - { name: "detail", label: "Detail", widget: "string" }
+                  - { name: "image", label: "Photo URL", widget: "string" }
+              - name: "sire"
+                label: "Sire (Dad)"
+                widget: "object"
+                fields:
+                  - { name: "name", label: "Name", widget: "string" }
+                  - { name: "detail", label: "Detail", widget: "string" }
+                  - { name: "image", label: "Photo URL", widget: "string" }
+              - { name: "previousGalleryTitle", label: "Previous Gallery Title (optional)", widget: "string", required: false }
+              - name: "previousGallery"
+                label: "Previous Gallery Photos (optional)"
+                widget: "list"
+                required: false
+                field: { name: "url", label: "Photo URL", widget: "string" }
