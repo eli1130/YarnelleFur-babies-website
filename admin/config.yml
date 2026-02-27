@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: eli1130/YarnelleFur-babies-website
+  name: git-gateway
   branch: main
 
 media_folder: "images"
