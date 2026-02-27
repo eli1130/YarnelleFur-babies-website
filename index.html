@@ -1171,7 +1171,8 @@ function renderBreedPage(l) {
 // ─────────────────────────────────────────
 fetch('/_data/litters.json')
   .then(r => r.json())
-  .then(litters => {
+  .then(data => {
+  const litters = data.litters || data;
     // Render breed cards on home page
     renderBreedCards(litters);
 
