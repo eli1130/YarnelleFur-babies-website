@@ -351,6 +351,11 @@
           "name": "Logan",
           "gender": "Boy",
           "price": "$650"
+        },
+        {
+          "name": "Leo",
+          "gender": "Boy",
+          "price": "$650"
         }
       ],
       "sire": {
@@ -380,6 +385,10 @@
         {
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0083.jpg",
           "name": "Logan"
+        },
+        {
+          "name": "Leo",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/typorama.png"
         }
       ],
       "generation": "F1",
