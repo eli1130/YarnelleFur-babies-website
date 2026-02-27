@@ -476,114 +476,6 @@
       "breedName": "Cavapoos"
     },
     {
-      "contact": "Sarah · (260) 494-0405",
-      "grooming": "Roughly every 3–4 months",
-      "family": "Hunter & Sarah Nicodemus",
-      "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
-      "availablePuppies": [
-        {
-          "name": "Helena",
-          "gender": "Girl",
-          "price": "$1,500"
-        },
-        {
-          "name": "Hadassah",
-          "gender": "Girl",
-          "price": "$1,500"
-        }
-      ],
-      "sire": {
-        "name": "Cedar",
-        "role": "Sire",
-        "detail": "AKC Red Mini Poodle · 17 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0111.jpg"
-      },
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0010.jpg",
-      "firstLitterNote": "",
-      "litterTitle": "Helga × Cedar",
-      "dam": {
-        "name": "Helga",
-        "role": "Dam",
-        "detail": "Mini F1 Goldendoodle · 25 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0110.jpg"
-      },
-      "priceRange": "$1,500",
-      "cardImagePosition": "center 20%",
-      "takeHomeDate": "Ready Now!",
-      "puppyPhotos": [
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0108.jpg",
-          "name": "Helena"
-        },
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0109.jpg",
-          "name": "Hadassah"
-        }
-      ],
-      "generation": "F1B",
-      "dateOfBirth": "November 17, 2025",
-      "previousGallery": [
-        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0112.jpg",
-        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0113.jpg",
-        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0114.jpg",
-        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0115.jpg"
-      ],
-      "id": "micro-golden",
-      "description": "Micro Mini F1B Goldendoodles — tiny bundles of golden joy, low-shedding. Helga × Cedar litter.",
-      "estimatedSize": "15–20 lbs",
-      "previousGalleryTitle": "Previous Helga & Cedar Puppies",
-      "temperament": "Smart, playful, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
-      "deposit": "$400",
-      "breedName": "Micro Mini Goldendoodles"
-    },
-    {
-      "contact": "Sarah · (260) 494-0405",
-      "grooming": "TBD per coat type",
-      "family": "Hunter & Sarah Nicodemus",
-      "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
-      "availablePuppies": [
-        {
-          "name": "Scarlett",
-          "gender": "Girl",
-          "price": "$1,500"
-        }
-      ],
-      "sire": {
-        "name": "Thor",
-        "role": "Sire",
-        "detail": "AKC Chocolate Standard Poodle · 51 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0118.jpg"
-      },
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0011.jpg",
-      "firstLitterNote": "This is Sky and Thor's first litter together!",
-      "litterTitle": "Sky × Thor",
-      "dam": {
-        "name": "Sky",
-        "role": "Dam",
-        "detail": "Mini F1 Bernedoodle · 33 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0117.jpg"
-      },
-      "priceRange": "$1,500",
-      "cardImagePosition": "center 20%",
-      "takeHomeDate": "Ready Now!",
-      "puppyPhotos": [
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0116.jpg",
-          "name": "Scarlett"
-        }
-      ],
-      "generation": "F1B",
-      "dateOfBirth": "November 25, 2025",
-      "previousGallery": [],
-      "id": "medium-berne",
-      "description": "Medium F1B Bernedoodles — ideal mid-size family dog, plush coat, gentle nature. Sky × Thor litter.",
-      "estimatedSize": "40–50 lbs",
-      "previousGalleryTitle": "",
-      "temperament": "Loyal, affectionate, \"velcro dogs,\" intelligent, playful, and gentle",
-      "deposit": "$400",
-      "breedName": "Medium F1B Bernedoodles"
-    },
-    {
       "contact": "Brooke · (260) 443-9035",
       "grooming": "Every 3–4 months",
       "family": "Dakoda & Brooke Labenz",
@@ -718,6 +610,114 @@
       "temperament": "Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
       "deposit": "$400",
       "breedName": "Saint Berdoodles — Gracie"
+    },
+    {
+      "contact": "Sarah · (260) 494-0405",
+      "grooming": "Roughly every 3–4 months",
+      "family": "Hunter & Sarah Nicodemus",
+      "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
+      "availablePuppies": [
+        {
+          "name": "Helena",
+          "gender": "Girl",
+          "price": "$1,500"
+        },
+        {
+          "name": "Hadassah",
+          "gender": "Girl",
+          "price": "$1,500"
+        }
+      ],
+      "sire": {
+        "name": "Cedar",
+        "role": "Sire",
+        "detail": "AKC Red Mini Poodle · 17 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0111.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0010.jpg",
+      "firstLitterNote": "",
+      "litterTitle": "Helga × Cedar",
+      "dam": {
+        "name": "Helga",
+        "role": "Dam",
+        "detail": "Mini F1 Goldendoodle · 25 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0110.jpg"
+      },
+      "priceRange": "$1,500",
+      "cardImagePosition": "center 20%",
+      "takeHomeDate": "Ready Now!",
+      "puppyPhotos": [
+        {
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0108.jpg",
+          "name": "Helena"
+        },
+        {
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0109.jpg",
+          "name": "Hadassah"
+        }
+      ],
+      "generation": "F1B",
+      "dateOfBirth": "November 17, 2025",
+      "previousGallery": [
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0112.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0113.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0114.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0115.jpg"
+      ],
+      "id": "micro-golden",
+      "description": "Micro Mini F1B Goldendoodles — tiny bundles of golden joy, low-shedding. Helga × Cedar litter.",
+      "estimatedSize": "15–20 lbs",
+      "previousGalleryTitle": "Previous Helga & Cedar Puppies",
+      "temperament": "Smart, playful, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
+      "deposit": "$400",
+      "breedName": "Micro Mini Goldendoodles"
+    },
+    {
+      "contact": "Sarah · (260) 494-0405",
+      "grooming": "TBD per coat type",
+      "family": "Hunter & Sarah Nicodemus",
+      "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
+      "availablePuppies": [
+        {
+          "name": "Scarlett",
+          "gender": "Girl",
+          "price": "$1,500"
+        }
+      ],
+      "sire": {
+        "name": "Thor",
+        "role": "Sire",
+        "detail": "AKC Chocolate Standard Poodle · 51 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0118.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0011.jpg",
+      "firstLitterNote": "This is Sky and Thor's first litter together!",
+      "litterTitle": "Sky × Thor",
+      "dam": {
+        "name": "Sky",
+        "role": "Dam",
+        "detail": "Mini F1 Bernedoodle · 33 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0117.jpg"
+      },
+      "priceRange": "$1,500",
+      "cardImagePosition": "center 20%",
+      "takeHomeDate": "Ready Now!",
+      "puppyPhotos": [
+        {
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0116.jpg",
+          "name": "Scarlett"
+        }
+      ],
+      "generation": "F1B",
+      "dateOfBirth": "November 25, 2025",
+      "previousGallery": [],
+      "id": "medium-berne",
+      "description": "Medium F1B Bernedoodles — ideal mid-size family dog, plush coat, gentle nature. Sky × Thor litter.",
+      "estimatedSize": "40–50 lbs",
+      "previousGalleryTitle": "",
+      "temperament": "Loyal, affectionate, \"velcro dogs,\" intelligent, playful, and gentle",
+      "deposit": "$400",
+      "breedName": "Medium F1B Bernedoodles"
     }
   ]
 }
