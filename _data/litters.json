@@ -337,16 +337,11 @@
       "breedName": "Saint Berdoodles — Blake"
     },
     {
-      "contact": "Luke · (260) 213-1685",
+      "contact": "Luke • (260) 213-1685",
       "grooming": "TBD per coat type",
       "family": "Luke & Eli Yarnelle",
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
       "availablePuppies": [
-        {
-          "name": "Lucas",
-          "gender": "Boy",
-          "price": "$650"
-        },
         {
           "name": "Logan",
           "gender": "Boy",
@@ -373,10 +368,6 @@
       "cardImagePosition": "center 20%",
       "takeHomeDate": "Ready Now!",
       "puppyPhotos": [
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0082.jpg",
-          "name": "Lucas"
-        },
         {
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0083.jpg",
           "name": "Logan"
@@ -529,7 +520,7 @@
       "dam": {
         "name": "Gracie",
         "role": "Dam",
-        "detail": "F1B Saint Berdoodle · 65 lbs",
+        "detail": "F1B Saint Berdoodle · 85 lbs",
         "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0140.jpg"
       },
       "priceRange": "$1,850 – $2,000",
