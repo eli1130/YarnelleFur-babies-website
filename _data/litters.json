@@ -501,11 +501,6 @@
           "name": "Georgia",
           "gender": "Girl",
           "price": "$1,850"
-        },
-        {
-          "name": "Gianna",
-          "gender": "Girl",
-          "price": "$1,850"
         }
       ],
       "sire": {
@@ -579,15 +574,6 @@
             "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0134.jpg",
             "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0135.jpg",
             "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0136.jpg"
-          ]
-        },
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0137.jpg",
-          "name": "Gianna",
-          "carousel": [
-            "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0137.jpg",
-            "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0138.jpg",
-            "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0139.jpg"
           ]
         }
       ],
