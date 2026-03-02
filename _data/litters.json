@@ -98,11 +98,6 @@
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
       "availablePuppies": [
         {
-          "name": "Jacob",
-          "gender": "Boy",
-          "price": "$1,200"
-        },
-        {
           "name": "Jade",
           "gender": "Girl",
           "price": "$1,800"
@@ -127,10 +122,6 @@
       "cardImagePosition": "center center",
       "takeHomeDate": "February 7, 2026",
       "puppyPhotos": [
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0052.jpg",
-          "name": "Jacob"
-        },
         {
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0053.jpg",
           "name": "Jade"
@@ -515,7 +506,7 @@
       "dam": {
         "name": "Gracie",
         "role": "Dam",
-        "detail": "F1B Saint Berdoodle · 85 lbs",
+        "detail": "F1B Saint Berdoodle · 80 lbs",
         "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0140.jpg"
       },
       "priceRange": "$1,850 – $2,000",
