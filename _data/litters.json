@@ -93,57 +93,6 @@
     },
     {
       "contact": "Brooke · (260) 443-9035",
-      "grooming": "Roughly every 4–6 months",
-      "family": "John & Kathy Yarnelle",
-      "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
-      "availablePuppies": [
-        {
-          "name": "Jade",
-          "gender": "Girl",
-          "price": "$1,800"
-        }
-      ],
-      "sire": {
-        "name": "Ash",
-        "role": "Sire",
-        "detail": "Cream Toy Poodle · 9 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0055.jpg"
-      },
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0002.jpg",
-      "firstLitterNote": "",
-      "litterTitle": "Jojo × Ash",
-      "dam": {
-        "name": "Jojo",
-        "role": "Dam",
-        "detail": "Blue Merle Toy Australian Shepherd · 12 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0054.jpg"
-      },
-      "priceRange": "$1,200 – $1,800",
-      "cardImagePosition": "center center",
-      "takeHomeDate": "February 7, 2026",
-      "puppyPhotos": [
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0053.jpg",
-          "name": "Jade"
-        }
-      ],
-      "generation": "F1",
-      "dateOfBirth": "December 13, 2025",
-      "previousGallery": [
-        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0056.jpg",
-        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0057.jpg",
-        "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0058.jpg"
-      ],
-      "id": "aussiedoodle",
-      "description": "F1 Toy Aussiedoodles — intelligent, playful, compact. Jojo × Ash litter.",
-      "estimatedSize": "10–15 lbs",
-      "previousGalleryTitle": "Jojo & Ash's Previous Puppies",
-      "temperament": "Intelligent, friendly, affectionate, playful",
-      "deposit": "$400",
-      "breedName": "Toy Aussiedoodles"
-    },
-    {
-      "contact": "Brooke · (260) 443-9035",
       "grooming": "Roughly every 3 months",
       "family": "John & Kathy Yarnelle",
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
