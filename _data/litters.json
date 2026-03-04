@@ -52,23 +52,23 @@
       "takeHomeDate": "March 4, 2026",
       "puppyPhotos": [
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0038.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590575/typorama_uhv61c.png",
           "name": "Leena"
         },
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0039.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_qxxzil.png",
           "name": "Lilly"
         },
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0040.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590575/typorama_abp27b.png",
           "name": "Liam"
         },
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0041.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590571/typorama_prizqd.png",
           "name": "Lachlan"
         },
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0042.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_pox7x4.png",
           "name": "Laiken"
         }
       ],
@@ -123,7 +123,7 @@
       "takeHomeDate": "Ready Now!",
       "puppyPhotos": [
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0059.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_ngb2qu.jpg",
           "name": "Finnigan"
         }
       ],
@@ -197,11 +197,6 @@
           "price": "$1,000"
         },
         {
-          "name": "Beckett",
-          "gender": "Boy",
-          "price": "$1,000"
-        },
-        {
           "name": "Ben",
           "gender": "Boy",
           "price": "$1,600"
@@ -232,19 +227,15 @@
       "takeHomeDate": "February 5, 2026",
       "puppyPhotos": [
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0068.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590567/typorama_bgbi8e.jpg",
           "name": "Benson"
         },
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0069.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590567/typorama_tyawzq.png",
           "name": "Ben"
         },
         {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0070.jpg",
-          "name": "Beckett"
-        },
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0071.jpg",
+          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590571/typorama_xkvw0h.png",
           "name": "Brody"
         }
       ],
