@@ -9,7 +9,7 @@
         {
           "name": "Leena",
           "gender": "Girl",
-          "price": "$1,200"
+          "price": "$1,000"
         },
         {
           "name": "Lilly",
@@ -38,7 +38,7 @@
         "detail": "AKC Blue Merle Standard Poodle · 60 lbs",
         "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0044.jpg"
       },
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0001.jpg",
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_pox7x4.png",
       "firstLitterNote": "",
       "litterTitle": "Lucy × Bonsai",
       "dam": {
@@ -109,7 +109,7 @@
         "detail": "Mini F1 Tricolored Bernedoodle · 40 lbs",
         "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0061.jpg"
       },
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0003.jpg",
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_ngb2qu.jpg",
       "firstLitterNote": "This is Flower and Sycamore's first litter together!",
       "litterTitle": "Flower × Sycamore",
       "dam": {
@@ -194,17 +194,17 @@
         {
           "name": "Brody",
           "gender": "Boy",
-          "price": "$1,000"
+          "price": "$800"
         },
         {
           "name": "Ben",
           "gender": "Boy",
-          "price": "$1,600"
+          "price": "$1,400"
         },
         {
           "name": "Benson",
           "gender": "Boy",
-          "price": "$1,800"
+          "price": "$1,600"
         }
       ],
       "sire": {
@@ -213,7 +213,7 @@
         "detail": "AKC Standard Sable Parti Poodle · 62 lbs",
         "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0074.jpg"
       },
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0006.jpg",
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590567/typorama_tyawzq.png",
       "firstLitterNote": "",
       "litterTitle": "Blake × Bamboo",
       "dam": {
@@ -336,7 +336,7 @@
         "detail": "AKC Red Mini Poodle · 9 lbs",
         "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0103.jpg"
       },
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0008.jpg",
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0097.jpg",
       "firstLitterNote": "",
       "litterTitle": "Honey × Teddy",
       "dam": {
