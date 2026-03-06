@@ -197,11 +197,6 @@
           "price": "$800"
         },
         {
-          "name": "Ben",
-          "gender": "Boy",
-          "price": "$1,400"
-        },
-        {
           "name": "Benson",
           "gender": "Boy",
           "price": "$1,600"
@@ -229,10 +224,6 @@
         {
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590567/typorama_bgbi8e.jpg",
           "name": "Benson"
-        },
-        {
-          "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590567/typorama_tyawzq.png",
-          "name": "Ben"
         },
         {
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590571/typorama_xkvw0h.png",
