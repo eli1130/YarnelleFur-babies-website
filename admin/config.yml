@@ -1,10 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "images"
 public_folder: "images"
-
 collections:
   - name: "litters"
     label: "Litters"
@@ -25,6 +23,7 @@ collections:
               - { name: "description", label: "Card Description", widget: "string" }
               - { name: "priceRange", label: "Price Range", widget: "string" }
               - { name: "cardImage", label: "Card Image URL", widget: "string" }
+              - { name: "cardImagePosition", label: "Card Image Position", widget: "string", required: false }
               - { name: "litterTitle", label: "Litter Title", widget: "string" }
               - { name: "dateOfBirth", label: "Date of Birth", widget: "string" }
               - { name: "takeHomeDate", label: "Take Home Date", widget: "string" }
@@ -40,7 +39,12 @@ collections:
                 widget: "list"
                 fields:
                   - { name: "name", label: "Puppy Name", widget: "string" }
-                  - { name: "image", label: "Photo URL", widget: "string" }
+                  - { name: "image", label: "Main Photo URL", widget: "string" }
+                  - name: "carousel"
+                    label: "Carousel Photos (optional extra photos)"
+                    widget: "list"
+                    required: false
+                    field: { name: "image", label: "Photo URL", widget: "string" }
               - name: "availablePuppies"
                 label: "Available Puppies"
                 widget: "list"
