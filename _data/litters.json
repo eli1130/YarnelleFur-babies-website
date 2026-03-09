@@ -1,24 +1,53 @@
 {
   "litters": [
     {
-      "id": "saint-lucy",
-      "breedName": "Saint Berdoodles",
-      "family": "John & Kathy Yarnelle",
-      "generation": "F1B",
-      "description": "Standard F1B Saint Berdoodles — gentle giants with sweet temperaments. Lucy × Bonsai litter.",
-      "priceRange": "$1,200 – $2,000",
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_pox7x4.png",
-      "cardImagePosition": "center center",
-      "litterTitle": "Lucy × Bonsai",
-      "dateOfBirth": "January 7, 2026",
-      "takeHomeDate": "March 4, 2026",
-      "estimatedSize": "75–90+ lbs",
-      "grooming": "Roughly every 4 months",
-      "temperament": "Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
-      "deposit": "$400",
       "contact": "Brooke · (260) 443-9035",
+      "grooming": "Roughly every 4 months",
+      "family": "John & Kathy Yarnelle",
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
+      "availablePuppies": [
+        {
+          "name": "Leena",
+          "gender": "Girl",
+          "price": "$1,000"
+        },
+        {
+          "name": "Lilly",
+          "gender": "Girl",
+          "price": "$1,200"
+        },
+        {
+          "name": "Liam",
+          "gender": "Boy",
+          "price": "$1,200"
+        },
+        {
+          "name": "Lachlan",
+          "gender": "Boy",
+          "price": "$1,200"
+        },
+        {
+          "name": "Laiken",
+          "gender": "Girl",
+          "price": "$2,000"
+        }
+      ],
+      "sire": {
+        "name": "Bonsai",
+        "detail": "AKC Blue Merle Standard Poodle · 60 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0044.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_pox7x4.png",
       "firstLitterNote": "",
+      "litterTitle": "Lucy × Bonsai",
+      "dam": {
+        "name": "Lucy",
+        "detail": "Standard F1 Saint Berdoodle · 100 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0043.jpg"
+      },
+      "priceRange": "$1,200 – $2,000",
+      "cardImagePosition": "center center",
+      "takeHomeDate": "March 4, 2026",
       "puppyPhotos": [
         {
           "name": "Leena",
@@ -41,135 +70,162 @@
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_pox7x4.png"
         }
       ],
-      "availablePuppies": [
-        { "name": "Leena", "gender": "Girl", "price": "$1,000" },
-        { "name": "Lilly", "gender": "Girl", "price": "$1,200" },
-        { "name": "Liam", "gender": "Boy", "price": "$1,200" },
-        { "name": "Lachlan", "gender": "Boy", "price": "$1,200" },
-        { "name": "Laiken", "gender": "Girl", "price": "$2,000" }
-      ],
-      "dam": {
-        "name": "Lucy",
-        "detail": "Standard F1 Saint Berdoodle · 100 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0043.jpg"
-      },
-      "sire": {
-        "name": "Bonsai",
-        "detail": "AKC Blue Merle Standard Poodle · 60 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0044.jpg"
-      },
-      "previousGalleryTitle": "Previous Saint Berdoodle Puppies",
+      "generation": "F1B",
+      "dateOfBirth": "January 7, 2026",
       "previousGallery": [
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0045.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0046.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0047.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0048.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0049.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0050.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0051.jpg" }
-      ]
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0045.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0046.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0047.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0048.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0049.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0050.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0051.jpg"
+        }
+      ],
+      "id": "saint-lucy",
+      "description": "Standard F1B Saint Berdoodles — gentle giants with sweet temperaments. Lucy × Bonsai litter.",
+      "estimatedSize": "75–90+ lbs",
+      "previousGalleryTitle": "Previous Saint Berdoodle Puppies",
+      "temperament": "Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
+      "deposit": "$400",
+      "breedName": "Saint Berdoodles"
     },
     {
-      "id": "mini-berne",
-      "breedName": "Mini F1B Bernedoodles",
-      "family": "John & Kathy Yarnelle",
-      "generation": "F1B",
-      "description": "Mini F1B Bernedoodles — low-shedding, affectionate tricolor beauties. Flower × Sycamore litter.",
-      "priceRange": "$1,200",
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_ngb2qu.jpg",
-      "cardImagePosition": "center 20%",
-      "litterTitle": "Flower × Sycamore",
-      "dateOfBirth": "November 18, 2025",
-      "takeHomeDate": "Ready Now!",
-      "estimatedSize": "30–40 lbs",
-      "grooming": "Roughly every 3 months",
-      "temperament": "Very intelligent, loyal, eager to please, playful, sweet, and love to cuddle",
-      "deposit": "$400",
       "contact": "Brooke · (260) 443-9035",
+      "grooming": "Roughly every 3 months",
+      "family": "John & Kathy Yarnelle",
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
+      "availablePuppies": [
+        {
+          "name": "Finnigan",
+          "gender": "Boy",
+          "price": "$1,200"
+        }
+      ],
+      "sire": {
+        "name": "Sycamore",
+        "detail": "Mini F1 Tricolored Bernedoodle · 40 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0061.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_ngb2qu.jpg",
       "firstLitterNote": "This is Flower and Sycamore's first litter together!",
+      "litterTitle": "Flower × Sycamore",
+      "dam": {
+        "name": "Flower",
+        "detail": "AKC Tri Parti Standard Poodle · 38 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0060.jpg"
+      },
+      "priceRange": "$1,200",
+      "cardImagePosition": "center 20%",
+      "takeHomeDate": "Ready Now!",
       "puppyPhotos": [
         {
           "name": "Finnigan",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590573/typorama_ngb2qu.jpg"
         }
       ],
+      "generation": "F1B",
+      "dateOfBirth": "November 18, 2025",
+      "previousGallery": [],
+      "id": "mini-berne",
+      "description": "Mini F1B Bernedoodles — low-shedding, affectionate tricolor beauties. Flower × Sycamore litter.",
+      "estimatedSize": "30–40 lbs",
+      "previousGalleryTitle": "",
+      "temperament": "Very intelligent, loyal, eager to please, playful, sweet, and love to cuddle",
+      "deposit": "$400",
+      "breedName": "Mini F1B Bernedoodles"
+    },
+    {
+      "contact": "Luke · (260) 213-1685",
+      "grooming": "Roughly every 4–6 months",
+      "family": "Luke & Eli Yarnelle",
+      "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
       "availablePuppies": [
-        { "name": "Finnigan", "gender": "Boy", "price": "$1,200" }
+        {
+          "name": "Milo",
+          "gender": "Boy",
+          "price": "$800"
+        }
       ],
-      "dam": {
-        "name": "Flower",
-        "detail": "AKC Tri Parti Standard Poodle · 38 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0060.jpg"
-      },
       "sire": {
         "name": "Sycamore",
         "detail": "Mini F1 Tricolored Bernedoodle · 40 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0061.jpg"
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0067.jpg"
       },
-      "previousGalleryTitle": "",
-      "previousGallery": []
-    },
-    {
-      "id": "multigen-berne",
-      "breedName": "Mini Multigen Bernedoodles",
-      "family": "Luke & Eli Yarnelle",
-      "generation": "Multigen",
-      "description": "Multigen Mini Bernedoodles — predictable coats, exceptional temperaments. Meadow May × Sycamore litter.",
-      "priceRange": "$800",
       "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0005.jpg",
-      "cardImagePosition": "center 20%",
-      "litterTitle": "Meadow May × Sycamore",
-      "dateOfBirth": "October 27, 2025",
-      "takeHomeDate": "Ready Now!",
-      "estimatedSize": "40–45 lbs",
-      "grooming": "Roughly every 4–6 months",
-      "temperament": "Very intelligent, energetic, playful, sweet, and love to cuddle",
-      "deposit": "$400",
-      "contact": "Luke · (260) 213-1685",
-      "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
       "firstLitterNote": "This is Meadow and Sycamore's first litter together!",
+      "litterTitle": "Meadow May × Sycamore",
+      "dam": {
+        "name": "Meadow May",
+        "detail": "Mini F1 Tricolored Bernedoodle · 37 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0066.jpg"
+      },
+      "priceRange": "$800",
+      "cardImagePosition": "center 20%",
+      "takeHomeDate": "Ready Now!",
       "puppyPhotos": [
         {
           "name": "Milo",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0065.jpg"
         }
       ],
-      "availablePuppies": [
-        { "name": "Milo", "gender": "Boy", "price": "$800" }
-      ],
-      "dam": {
-        "name": "Meadow May",
-        "detail": "Mini F1 Tricolored Bernedoodle · 37 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0066.jpg"
-      },
-      "sire": {
-        "name": "Sycamore",
-        "detail": "Mini F1 Tricolored Bernedoodle · 40 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0067.jpg"
-      },
+      "generation": "Multigen",
+      "dateOfBirth": "October 27, 2025",
+      "previousGallery": [],
+      "id": "multigen-berne",
+      "description": "Multigen Mini Bernedoodles — predictable coats, exceptional temperaments. Meadow May × Sycamore litter.",
+      "estimatedSize": "40–45 lbs",
       "previousGalleryTitle": "",
-      "previousGallery": []
+      "temperament": "Very intelligent, energetic, playful, sweet, and love to cuddle",
+      "deposit": "$400",
+      "breedName": "Mini Multigen Bernedoodles"
     },
     {
-      "id": "saint-blake",
-      "breedName": "Saint Berdoodles — Blake",
-      "family": "Luke & Eli Yarnelle",
-      "generation": "F1B",
-      "description": "Standard F1B Saint Berdoodles — big-hearted, fluffy, endlessly cuddly. Blake × Bamboo litter.",
-      "priceRange": "$1,000 – $2,000",
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590567/typorama_bgbi8e.jpg",
-      "cardImagePosition": "center center",
-      "litterTitle": "Blake × Bamboo",
-      "dateOfBirth": "December 11, 2025",
-      "takeHomeDate": "February 5, 2026",
-      "estimatedSize": "75+ lbs",
-      "grooming": "Roughly every 4–6 months",
-      "temperament": "Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
-      "deposit": "$400",
       "contact": "Brooke · (260) 443-9035",
+      "grooming": "Roughly every 4–6 months",
+      "family": "Luke & Eli Yarnelle",
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
+      "availablePuppies": [
+        {
+          "name": "Brody",
+          "gender": "Boy",
+          "price": "$800"
+        },
+        {
+          "name": "Benson",
+          "gender": "Boy",
+          "price": "$1,600"
+        }
+      ],
+      "sire": {
+        "name": "Bamboo",
+        "detail": "AKC Standard Sable Parti Poodle · 62 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0074.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590567/typorama_bgbi8e.jpg",
       "firstLitterNote": "",
+      "litterTitle": "Blake × Bamboo",
+      "dam": {
+        "name": "Blake",
+        "detail": "Standard F1 Saint Berdoodle · 95 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0073.jpg"
+      },
+      "priceRange": "$1,000 – $2,000",
+      "cardImagePosition": "center center",
+      "takeHomeDate": "February 5, 2026",
       "puppyPhotos": [
         {
           "name": "Benson",
@@ -180,211 +236,335 @@
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772590571/typorama_xkvw0h.png"
         }
       ],
-      "availablePuppies": [
-        { "name": "Brody", "gender": "Boy", "price": "$800" },
-        { "name": "Benson", "gender": "Boy", "price": "$1,600" }
-      ],
-      "dam": {
-        "name": "Blake",
-        "detail": "Standard F1 Saint Berdoodle · 95 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0073.jpg"
-      },
-      "sire": {
-        "name": "Bamboo",
-        "detail": "AKC Standard Sable Parti Poodle · 62 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0074.jpg"
-      },
-      "previousGalleryTitle": "Previous Saint Berdoodle Puppies",
+      "generation": "F1B",
+      "dateOfBirth": "December 11, 2025",
       "previousGallery": [
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0075.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0076.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0077.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0078.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0079.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0080.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0081.jpg" }
-      ]
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0075.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0076.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0077.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0078.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0079.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0080.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0081.jpg"
+        }
+      ],
+      "id": "saint-blake",
+      "description": "Standard F1B Saint Berdoodles — big-hearted, fluffy, endlessly cuddly. Blake × Bamboo litter.",
+      "estimatedSize": "75+ lbs",
+      "previousGalleryTitle": "Previous Saint Berdoodle Puppies",
+      "temperament": "Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
+      "deposit": "$400",
+      "breedName": "Saint Berdoodles — Blake"
     },
     {
-      "id": "cavapoo",
-      "breedName": "Cavapoos",
-      "family": "Dakoda & Brooke Labenz",
-      "generation": "F1B",
-      "description": "F1B Red Cavapoos — small in size, enormous in personality. Honey × Teddy litter.",
-      "priceRange": "$2,000",
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0097.jpg",
-      "cardImagePosition": "center center",
-      "litterTitle": "Honey × Teddy",
-      "dateOfBirth": "January 20, 2026",
-      "takeHomeDate": "March 17–31, 2026",
-      "estimatedSize": "7–10 lbs",
-      "grooming": "Roughly every 3 months",
-      "temperament": "Intelligent, outgoing, loving, friendly, great with kiddos, and playful",
-      "deposit": "$400",
       "contact": "Brooke · (260) 443-9035",
+      "grooming": "Roughly every 3 months",
+      "family": "Dakoda & Brooke Labenz",
       "cashAppLink": "https://cash.app/$BrookeLabenz",
+      "availablePuppies": [
+        {
+          "name": "Hayes",
+          "gender": "Boy",
+          "price": "$2,000"
+        },
+        {
+          "name": "Hank",
+          "gender": "Boy",
+          "price": "$2,000"
+        }
+      ],
+      "sire": {
+        "name": "Teddy",
+        "detail": "AKC Red Mini Poodle · 9 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0103.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0097.jpg",
       "firstLitterNote": "",
+      "litterTitle": "Honey × Teddy",
+      "dam": {
+        "name": "Honey",
+        "detail": "Red Cavapoo · 7 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0102.jpg"
+      },
+      "priceRange": "$2,000",
+      "cardImagePosition": "center center",
+      "takeHomeDate": "March 17–31, 2026",
       "puppyPhotos": [
         {
           "name": "Hayes",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0092.jpg",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0092.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0093.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0094.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0095.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0096.jpg" }
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0092.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0093.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0094.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0095.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0096.jpg"
+            }
           ]
         },
         {
           "name": "Hank",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0097.jpg",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0097.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0098.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0099.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0100.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0101.jpg" }
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0097.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0098.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0099.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0100.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0101.jpg"
+            }
           ]
         }
       ],
-      "availablePuppies": [
-        { "name": "Hayes", "gender": "Boy", "price": "$2,000" },
-        { "name": "Hank", "gender": "Boy", "price": "$2,000" }
-      ],
-      "dam": {
-        "name": "Honey",
-        "detail": "Red Cavapoo · 7 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0102.jpg"
-      },
-      "sire": {
-        "name": "Teddy",
-        "detail": "AKC Red Mini Poodle · 9 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0103.jpg"
-      },
-      "previousGalleryTitle": "Honey's Previous Puppies Full Grown",
+      "generation": "F1B",
+      "dateOfBirth": "January 20, 2026",
       "previousGallery": [
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0104.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0105.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0106.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0107.jpg" }
-      ]
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0104.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0105.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0106.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0107.jpg"
+        }
+      ],
+      "id": "cavapoo",
+      "description": "F1B Red Cavapoos — small in size, enormous in personality. Honey × Teddy litter.",
+      "estimatedSize": "7–10 lbs",
+      "previousGalleryTitle": "Honey's Previous Puppies Full Grown",
+      "temperament": "Intelligent, outgoing, loving, friendly, great with kiddos, and playful",
+      "deposit": "$400",
+      "breedName": "Cavapoos"
     },
     {
-      "id": "saint-gracie",
-      "breedName": "Saint Berdoodles — Gracie",
-      "family": "Dakoda & Brooke Labenz",
-      "generation": "F1B",
-      "description": "Standard F1B Saint Berdoodles — gentle giants, cuddly, calm, and great with families. Gracie × Pumpkin litter.",
-      "priceRange": "$1,850 – $2,000",
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014840/typorama_hchte5.png",
-      "cardImagePosition": "center 20%",
-      "litterTitle": "Gracie × Pumpkin",
-      "dateOfBirth": "February 1, 2026",
-      "takeHomeDate": "March 29, 2026",
-      "estimatedSize": "75–90+ lbs",
-      "grooming": "Every 3–4 months",
-      "temperament": "Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
-      "deposit": "$400",
       "contact": "Brooke · (260) 443-9035",
+      "grooming": "Every 3–4 months",
+      "family": "Dakoda & Brooke Labenz",
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
+      "availablePuppies": [
+        {
+          "name": "Gunner",
+          "gender": "Boy",
+          "price": "$2,000"
+        },
+        {
+          "name": "Gemma",
+          "gender": "Girl",
+          "price": "$2,000"
+        },
+        {
+          "name": "Grady",
+          "gender": "Boy",
+          "price": "$1,850"
+        },
+        {
+          "name": "Granger",
+          "gender": "Boy",
+          "price": "$1,850"
+        },
+        {
+          "name": "Graham",
+          "gender": "Boy",
+          "price": "$1,850"
+        },
+        {
+          "name": "Georgia",
+          "gender": "Girl",
+          "price": "$1,850"
+        }
+      ],
+      "sire": {
+        "name": "Pumpkin",
+        "detail": "Standard Poodle · 65 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0141.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014840/typorama_hchte5.png",
       "firstLitterNote": "",
+      "litterTitle": "Gracie × Pumpkin",
+      "dam": {
+        "name": "Gracie",
+        "detail": "F1B Saint Berdoodle · 80 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0140.jpg"
+      },
+      "priceRange": "$1,850 – $2,000",
+      "cardImagePosition": "center 20%",
+      "takeHomeDate": "March 29, 2026",
       "puppyPhotos": [
         {
           "name": "Gunner",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014789/typorama_qhgwnv.png",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0119.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0120.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0121.jpg" }
+            "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014789/typorama_qhgwnv.png",
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0119.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0120.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0121.jpg"
+            }
           ]
         },
         {
           "name": "Gemma",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014840/typorama_hchte5.png",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0122.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0123.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0124.jpg" }
+            "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014840/typorama_hchte5.png",
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0122.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0123.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0124.jpg"
+            }
           ]
         },
         {
           "name": "Grady",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014790/typorama_rhgex7.png",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0125.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0126.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0127.jpg" }
+            "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014790/typorama_rhgex7.png",
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0125.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0126.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0127.jpg"
+            }
           ]
         },
         {
           "name": "Granger",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014841/typorama_ethnzw.png",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0128.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0129.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0130.jpg" }
+            "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014841/typorama_ethnzw.png",
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0128.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0129.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0130.jpg"
+            }
           ]
         },
         {
           "name": "Graham",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014820/typorama_q3f6gg.png",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0131.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0132.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0133.jpg" }
+            "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014820/typorama_q3f6gg.png",
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0131.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0132.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0133.jpg"
+            }
           ]
         },
         {
           "name": "Georgia",
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014793/typorama_uvdcmq.png",
           "carousel": [
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0134.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0135.jpg" },
-            { "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0136.jpg" }
+            "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1773014793/typorama_uvdcmq.png",
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0134.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0135.jpg"
+            },
+            {
+              "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0136.jpg"
+            }
           ]
         }
       ],
-      "availablePuppies": [
-        { "name": "Gunner", "gender": "Boy", "price": "$2,000" },
-        { "name": "Gemma", "gender": "Girl", "price": "$2,000" },
-        { "name": "Grady", "gender": "Boy", "price": "$1,850" },
-        { "name": "Granger", "gender": "Boy", "price": "$1,850" },
-        { "name": "Graham", "gender": "Boy", "price": "$1,850" },
-        { "name": "Georgia", "gender": "Girl", "price": "$1,850" }
-      ],
-      "dam": {
-        "name": "Gracie",
-        "detail": "F1B Saint Berdoodle · 80 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0140.jpg"
-      },
-      "sire": {
-        "name": "Pumpkin",
-        "detail": "Standard Poodle · 65 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0141.jpg"
-      },
+      "generation": "F1B",
+      "dateOfBirth": "February 1, 2026",
+      "previousGallery": [],
+      "id": "saint-gracie",
+      "description": "Standard F1B Saint Berdoodles — gentle giants, cuddly, calm, and great with families. Gracie × Pumpkin litter.",
+      "estimatedSize": "75–90+ lbs",
       "previousGalleryTitle": "",
-      "previousGallery": []
+      "temperament": "Friendly, watchful, calm, gentle, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
+      "deposit": "$400",
+      "breedName": "Saint Berdoodles — Gracie"
     },
     {
-      "id": "micro-golden",
-      "breedName": "Micro Mini Goldendoodles",
-      "family": "Hunter & Sarah Nicodemus",
-      "generation": "F1B",
-      "description": "Micro Mini F1B Goldendoodles — tiny bundles of golden joy, low-shedding. Helga × Cedar litter.",
-      "priceRange": "$1,500",
-      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0010.jpg",
-      "cardImagePosition": "center 20%",
-      "litterTitle": "Helga × Cedar",
-      "dateOfBirth": "November 17, 2025",
-      "takeHomeDate": "Ready Now!",
-      "estimatedSize": "15–20 lbs",
-      "grooming": "Roughly every 3–4 months",
-      "temperament": "Smart, playful, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
-      "deposit": "$400",
       "contact": "Sarah · (260) 494-0405",
+      "grooming": "Roughly every 3–4 months",
+      "family": "Hunter & Sarah Nicodemus",
       "cashAppLink": "https://cash.app/$YarnelleFurBabies1",
+      "availablePuppies": [
+        {
+          "name": "Helena",
+          "gender": "Girl",
+          "price": "$1,500"
+        },
+        {
+          "name": "Hadassah",
+          "gender": "Girl",
+          "price": "$1,500"
+        }
+      ],
+      "sire": {
+        "name": "Cedar",
+        "detail": "AKC Red Mini Poodle · 17 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0111.jpg"
+      },
+      "cardImage": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0010.jpg",
       "firstLitterNote": "",
+      "litterTitle": "Helga × Cedar",
+      "dam": {
+        "name": "Helga",
+        "detail": "Mini F1 Goldendoodle · 25 lbs",
+        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0110.jpg"
+      },
+      "priceRange": "$1,500",
+      "cardImagePosition": "center 20%",
+      "takeHomeDate": "Ready Now!",
       "puppyPhotos": [
         {
           "name": "Helena",
@@ -395,27 +575,29 @@
           "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0109.jpg"
         }
       ],
-      "availablePuppies": [
-        { "name": "Helena", "gender": "Girl", "price": "$1,500" },
-        { "name": "Hadassah", "gender": "Girl", "price": "$1,500" }
-      ],
-      "dam": {
-        "name": "Helga",
-        "detail": "Mini F1 Goldendoodle · 25 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0110.jpg"
-      },
-      "sire": {
-        "name": "Cedar",
-        "detail": "AKC Red Mini Poodle · 17 lbs",
-        "image": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0111.jpg"
-      },
-      "previousGalleryTitle": "Previous Helga & Cedar Puppies",
+      "generation": "F1B",
+      "dateOfBirth": "November 17, 2025",
       "previousGallery": [
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0112.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0113.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0114.jpg" },
-        { "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0115.jpg" }
-      ]
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0112.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0113.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0114.jpg"
+        },
+        {
+          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0115.jpg"
+        }
+      ],
+      "id": "micro-golden",
+      "description": "Micro Mini F1B Goldendoodles — tiny bundles of golden joy, low-shedding. Helga × Cedar litter.",
+      "estimatedSize": "15–20 lbs",
+      "previousGalleryTitle": "Previous Helga & Cedar Puppies",
+      "temperament": "Smart, playful, sweet, love to cuddle, incredibly friendly with other dogs, cats, and kiddos",
+      "deposit": "$400",
+      "breedName": "Micro Mini Goldendoodles"
     }
   ]
 }
