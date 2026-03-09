@@ -1008,9 +1008,9 @@ function renderBreedCards(litters) {
 // Render a carousel for a puppy
 // ─────────────────────────────────────────
 function renderCarousel(carouselId, photos) {
-  const slides = photos.map((url, i) => `
+  const slides = photos.map((photo, i) => `
     <div class="carousel-slide${i === 0 ? ' active' : ''}">
-      <img src="${url}" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy photo" />
+      <img src="${typeof photo === 'string' ? photo : photo.image}" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;" alt="Puppy photo" />
     </div>
   `).join('');
   const dots = photos.map((_, i) => `
