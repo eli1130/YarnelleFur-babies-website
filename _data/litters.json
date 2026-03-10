@@ -112,7 +112,7 @@
         {
           "name": "Finnigan",
           "gender": "Boy",
-          "price": "$1,200"
+          "price": "$1,000"
         }
       ],
       "sire": {
@@ -207,7 +207,7 @@
         {
           "name": "Benson",
           "gender": "Boy",
-          "price": "$1,600"
+          "price": "$1,400"
         }
       ],
       "sire": {
