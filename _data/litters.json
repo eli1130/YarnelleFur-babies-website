@@ -74,24 +74,12 @@
       "dateOfBirth": "January 7, 2026",
       "previousGallery": [
         "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152633/image_0045.jpg",
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0046.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0047.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0048.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0049.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0050.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0051.jpg"
-        }
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152644/image_0046.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152645/image_0047.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152698/image_0048.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152697/image_0049.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152636/image_0050.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152634/image_0051.jpg"
       ],
       "id": "saint-lucy",
       "description": "Standard F1B Saint Berdoodles — gentle giants with sweet temperaments. Lucy × Bonsai litter.",
@@ -237,27 +225,13 @@
       "generation": "F1B",
       "dateOfBirth": "December 11, 2025",
       "previousGallery": [
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0075.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0076.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0077.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0078.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0079.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0080.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0081.jpg"
-        }
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152633/image_0045.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152644/image_0046.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152645/image_0047.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152698/image_0048.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152697/image_0049.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152636/image_0050.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152634/image_0051.jpg"
       ],
       "id": "saint-blake",
       "description": "Standard F1B Saint Berdoodles — big-hearted, fluffy, endlessly cuddly. Blake × Bamboo litter.",
@@ -347,18 +321,10 @@
       "generation": "F1B",
       "dateOfBirth": "January 20, 2026",
       "previousGallery": [
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0104.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0105.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0106.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0107.jpg"
-        }
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152671/image_0104.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152677/image_0105.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152685/image_0106.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152679/image_0107.jpg"
       ],
       "id": "cavapoo",
       "description": "F1B Red Cavapoos — small in size, enormous in personality. Honey × Teddy litter.",
@@ -576,18 +542,10 @@
       "generation": "F1B",
       "dateOfBirth": "November 17, 2025",
       "previousGallery": [
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0112.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0113.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0114.jpg"
-        },
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0115.jpg"
-        }
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152685/image_0112.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152679/image_0113.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152701/image_0114.jpg",
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152694/image_0115.jpg"
       ],
       "id": "micro-golden",
       "description": "Micro Mini F1B Goldendoodles — tiny bundles of golden joy, low-shedding. Helga × Cedar litter.",
