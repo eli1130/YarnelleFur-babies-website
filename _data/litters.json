@@ -73,9 +73,7 @@
       "generation": "F1B",
       "dateOfBirth": "January 7, 2026",
       "previousGallery": [
-        {
-          "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0045.jpg"
-        },
+        "https://res.cloudinary.com/dyzfpnrhg/image/upload/v1772152633/image_0045.jpg",
         {
           "url": "https://res.cloudinary.com/dyzfpnrhg/image/upload/image_0046.jpg"
         },
